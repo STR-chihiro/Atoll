@@ -620,7 +620,7 @@ struct LockScreenWeatherWidget: View {
 		.frame(maxWidth: .infinity, alignment: secondaryRowAlignment)
 		.padding(.horizontal, 2)
 		.opacity(shouldShowFocusWidget ? 1 : 0)
-		.accessibilityLabel("Focus active: \(focusDisplayName)")
+		.accessibilityLabel(String(format: String(localized: "Focus active: %@"), focusDisplayName))
 		.allowsHitTesting(false)
 	}
 
@@ -712,7 +712,7 @@ struct LockScreenWeatherWidget: View {
 		.padding(.horizontal, 2)
 		.id(calendarRowRenderToken)
 		.opacity(shouldShowFocusWidget && shouldShowCalendarRow ? 1 : 0)
-		.accessibilityLabel("\(line). Focus active: \(focusDisplayName)")
+		.accessibilityLabel(String(format: String(localized: "%@. Focus active: %@"), line, focusDisplayName))
 		.allowsHitTesting(false)
 	}
 
@@ -1188,7 +1188,7 @@ struct LockScreenWeatherWidget: View {
 				.minimumScaleFactor(0.85)
 		}
 		.layoutPriority(0.8)
-		.accessibilityLabel("Sunrise at \(text)")
+		.accessibilityLabel(String(format: String(localized: "Sunrise at %@"), text))
 	}
 
 	private var shouldShowLocation: Bool {
@@ -1214,10 +1214,10 @@ struct LockScreenWeatherWidget: View {
 			return trimmed
 		}
 		if focusMode == .doNotDisturb {
-			return "Do Not Disturb"
+			return String(localized: "Do Not Disturb")
 		}
 		let fallback = focusMode.displayName
-		return fallback.isEmpty ? "Focus" : fallback
+		return fallback.isEmpty ? String(localized: "Focus") : fallback
 	}
 
 	private var focusMode: FocusModeType {
@@ -1246,7 +1246,7 @@ struct LockScreenWeatherWidget: View {
 		}
 		.frame(maxWidth: .infinity, alignment: focusRowAlignment)
 		.padding(.horizontal, 2)
-		.accessibilityLabel("Focus active: \(focusDisplayName)")
+		.accessibilityLabel(String(format: String(localized: "Focus active: %@"), focusDisplayName))
 	}
 
 	private func chargingIconName(for info: LockScreenWeatherSnapshot.ChargingInfo) -> String? {
@@ -1528,13 +1528,13 @@ struct LockScreenWeatherWidget: View {
 		}
 
 		if shouldShowFocusWidget {
-			components.append("Focus active: \(focusDisplayName)")
+			components.append(String(format: String(localized: "Focus active: %@"), focusDisplayName))
 		}
 
 		if lockScreenShowCalendarEvent, let event = nextCalendarEvent {
 			let line = eventLineText(for: event)
 			if !line.isEmpty {
-				components.append("Calendar: \(line)")
+				components.append(String(format: String(localized: "Calendar: %@"), line))
 			}
 		}
 

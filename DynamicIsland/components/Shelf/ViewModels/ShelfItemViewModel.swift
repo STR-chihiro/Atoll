@@ -338,7 +338,7 @@ final class ShelfItemViewModel: ObservableObject {
         let menu = NSMenu()
 
         func addMenuItem(title: String) {
-            let mi = NSMenuItem(title: title, action: nil, keyEquivalent: "")
+            let mi = NSMenuItem(title: NSLocalizedString(title, comment: ""), action: nil, keyEquivalent: "")
             // Dispatch keys off the identifier so localized titles cannot break it.
             mi.identifier = NSUserInterfaceItemIdentifier(title)
             menu.addItem(mi)
@@ -402,7 +402,7 @@ final class ShelfItemViewModel: ObservableObject {
                         .font: NSFont.menuFont(ofSize: 0),
                         .foregroundColor: NSColor.labelColor
                     ])
-                    let defaultPart = NSAttributedString(string: " (default)", attributes: [
+                    let defaultPart = NSAttributedString(string: NSLocalizedString(" (default)", comment: ""), attributes: [
                         .font: NSFont.menuFont(ofSize: 0),
                         .foregroundColor: NSColor.secondaryLabelColor
                     ])
@@ -806,20 +806,23 @@ final class ShelfItemViewModel: ObservableObject {
             let chooserDelegate = AppChooserDelegate(recommended: recommendedApps)
             panel.delegate = chooserDelegate
 
-            let enableLabel = NSTextField(labelWithString: "Enable:")
+            let enableLabel = NSTextField(labelWithString: NSLocalizedString("Enable:", comment: ""))
             enableLabel.font = .systemFont(ofSize: NSFont.systemFontSize)
             enableLabel.alignment = .natural
             enableLabel.setContentHuggingPriority(.defaultHigh, for: .horizontal)
             
             let popup = NSPopUpButton(frame: .zero, pullsDown: false)
-            popup.addItems(withTitles: ["Recommended Applications", "All Applications"])
+            popup.addItems(withTitles: [
+                NSLocalizedString("Recommended Applications", comment: ""),
+                NSLocalizedString("All Applications", comment: "")
+            ])
             popup.font = .systemFont(ofSize: NSFont.systemFontSize)
             popup.selectItem(at: 0)
             
             popup.setContentHuggingPriority(.defaultLow, for: .horizontal)
             popup.widthAnchor.constraint(greaterThanOrEqualToConstant: 200).isActive = true
             
-            let alwaysCheckbox = NSButton(checkboxWithTitle: "Always Open With", target: nil, action: nil)
+            let alwaysCheckbox = NSButton(checkboxWithTitle: NSLocalizedString("Always Open With", comment: ""), target: nil, action: nil)
             alwaysCheckbox.font = .systemFont(ofSize: NSFont.systemFontSize)
             alwaysCheckbox.setContentHuggingPriority(.defaultLow, for: .horizontal)
 
@@ -909,8 +912,8 @@ final class ShelfItemViewModel: ObservableObject {
                     let didStart = fileURL.startAccessingSecurityScopedResource()
 
                     let savePanel = NSSavePanel()
-                    savePanel.title = "Rename File"
-                    savePanel.prompt = "Rename"
+                    savePanel.title = String(localized: "Rename File")
+                    savePanel.prompt = String(localized: "Rename")
                     savePanel.nameFieldStringValue = fileURL.lastPathComponent
                     savePanel.directoryURL = fileURL.deletingLastPathComponent()
                     savePanel.begin { response in
@@ -966,7 +969,7 @@ final class ShelfItemViewModel: ObservableObject {
                     }
                 } catch {
                     print("❌ Failed to remove background: \(error.localizedDescription)")
-                    await showErrorAlert(title: "Background Removal Failed", message: error.localizedDescription)
+                    await showErrorAlert(title: String(localized: "Background Removal Failed"), message: error.localizedDescription)
                 }
             }
         }
@@ -996,7 +999,7 @@ final class ShelfItemViewModel: ObservableObject {
                     }
                 } catch {
                     print("❌ Failed to create PDF: \(error.localizedDescription)")
-                    await showErrorAlert(title: "PDF Creation Failed", message: error.localizedDescription)
+                    await showErrorAlert(title: String(localized: "PDF Creation Failed"), message: error.localizedDescription)
                 }
             }
         }
@@ -1020,7 +1023,7 @@ final class ShelfItemViewModel: ObservableObject {
             accessoryView.wantsLayer = true
             
             // MARK: Format Row
-            let formatLabel = NSTextField(labelWithString: "Format:")
+            let formatLabel = NSTextField(labelWithString: NSLocalizedString("Format:", comment: ""))
             formatLabel.frame = NSRect(x: 0, y: 145, width: 100, height: 20)
             formatLabel.font = .systemFont(ofSize: 12, weight: .medium)
             accessoryView.addSubview(formatLabel)
@@ -1032,26 +1035,32 @@ final class ShelfItemViewModel: ObservableObject {
             accessoryView.addSubview(formatPopup)
             
             // MARK: Image Size Row
-            let imageSizeLabel = NSTextField(labelWithString: "Image Size:")
+            let imageSizeLabel = NSTextField(labelWithString: NSLocalizedString("Image Size:", comment: ""))
             imageSizeLabel.frame = NSRect(x: 0, y: 105, width: 100, height: 20)
             imageSizeLabel.font = .systemFont(ofSize: 12, weight: .medium)
             accessoryView.addSubview(imageSizeLabel)
             
             let imageSizePopup = NSPopUpButton(frame: NSRect(x: 120, y: 100, width: 160, height: 28))
-            imageSizePopup.addItems(withTitles: ["Actual Size", "Large", "Medium", "Small", "Custom..."])
+            imageSizePopup.addItems(withTitles: [
+                NSLocalizedString("Actual Size", comment: ""),
+                NSLocalizedString("Large", comment: ""),
+                NSLocalizedString("Medium", comment: ""),
+                NSLocalizedString("Small", comment: ""),
+                NSLocalizedString("Custom...", comment: "")
+            ])
             imageSizePopup.selectItem(at: 0)
             imageSizePopup.font = .systemFont(ofSize: 12)
             accessoryView.addSubview(imageSizePopup)
             
             // Custom size field (initially hidden)
             let customSizeField = NSTextField(frame: NSRect(x: 285, y: 103, width: 85, height: 22))
-            customSizeField.placeholderString = "e.g., 1920"
+            customSizeField.placeholderString = NSLocalizedString("e.g., 1920", comment: "")
             customSizeField.font = .systemFont(ofSize: 12)
             customSizeField.isHidden = true
             accessoryView.addSubview(customSizeField)
             
             // MARK: Preserve Metadata Checkbox
-            let metadataCheckbox = NSButton(checkboxWithTitle: "Preserve Metadata", target: nil, action: nil)
+            let metadataCheckbox = NSButton(checkboxWithTitle: NSLocalizedString("Preserve Metadata", comment: ""), target: nil, action: nil)
             metadataCheckbox.frame = NSRect(x: 120, y: 65, width: 200, height: 20)
             metadataCheckbox.font = .systemFont(ofSize: 12)
             metadataCheckbox.state = .on
@@ -1067,7 +1076,7 @@ final class ShelfItemViewModel: ObservableObject {
             let qualityRow = NSView(frame: NSRect(x: 0, y: 15, width: 380, height: 30))
             qualityRow.wantsLayer = true
             
-            let qualityLabel = NSTextField(labelWithString: "Compression:")
+            let qualityLabel = NSTextField(labelWithString: NSLocalizedString("Compression:", comment: ""))
             qualityLabel.frame = NSRect(x: 0, y: 7, width: 100, height: 20)
             qualityLabel.font = .systemFont(ofSize: 12, weight: .medium)
             qualityRow.addSubview(qualityLabel)
@@ -1204,7 +1213,7 @@ final class ShelfItemViewModel: ObservableObject {
                         }
                     } catch {
                         print("❌ Failed to convert image: \(error.localizedDescription)")
-                        showErrorAlert(title: "Image Conversion Failed", message: error.localizedDescription)
+                        showErrorAlert(title: String(localized: "Image Conversion Failed"), message: error.localizedDescription)
                     }
                 }
             }

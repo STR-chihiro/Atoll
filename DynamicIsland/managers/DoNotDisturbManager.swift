@@ -195,7 +195,7 @@ final class DoNotDisturbManager: ObservableObject {
                 if let tn = trimmedName, !tn.isEmpty, !tn.contains(".") {
                     finalName = tn
                 } else {
-                    finalName = "Focus"
+                    finalName = String(localized: "Focus")
                 }
             } else if resolvedMode == .custom, FullDiskAccessAuthorization.hasPermission() {
                 // With FDA, prefer the real name from ModeConfigurations.json (fixes slug names like graduationcap.fill).
@@ -205,30 +205,38 @@ final class DoNotDisturbManager: ObservableObject {
                 } else if let tn = trimmedName, !tn.isEmpty, !tn.contains(".") {
                     finalName = tn
                 } else {
-                    finalName = "Focus"
+                    finalName = String(localized: "Focus")
                 }
             } else if let name = trimmedName, !name.isEmpty {
                 let lower = name.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
                 switch lower {
                 case "work":
-                    finalName = "Work"
+                    finalName = String(localized: "Work")
                 case "personal", "personal-time":
-                    finalName = "Personal"
+                    finalName = String(localized: "Personal")
                 case "reduce-interruptions":
-                    finalName = "Reduce Interruptions"
+                    finalName = String(localized: "Reduce Interr.")
                 case "sleep", "sleep-mode":
-                    finalName = "Sleep"
+                    finalName = String(localized: "Sleep")
                 case "driving":
-                    finalName = "Driving"
+                    finalName = String(localized: "Driving")
+                case "fitness":
+                    finalName = String(localized: "Fitness")
+                case "gaming":
+                    finalName = String(localized: "Gaming")
+                case "mindfulness":
+                    finalName = String(localized: "Mindfulness")
+                case "reading":
+                    finalName = String(localized: "Reading")
                 case "default", "dnd", "do-not-disturb", "do not disturb", "donotdisturb":
-                    finalName = "Do Not Disturb"
+                    finalName = String(localized: "Do Not Disturb")
                 default:
                     finalName = name
                 }
             } else if !resolvedMode.displayName.isEmpty {
                 finalName = resolvedMode.displayName
             } else {
-                finalName = "Focus"
+                finalName = String(localized: "Focus")
             }
 
             let identifierChanged = finalIdentifier != previousIdentifier
@@ -240,7 +248,9 @@ final class DoNotDisturbManager: ObservableObject {
             }
 
             if nameChanged {
-                self.currentFocusModeName = finalName.localizedCaseInsensitiveContains("Reduce Interruptions") ? "Reduce Interr." : finalName
+                let isReduceInterruptions = finalName.localizedCaseInsensitiveContains("Reduce Interruptions")
+                    || finalName == "Reduce Interruptions"
+                self.currentFocusModeName = isReduceInterruptions ? String(localized: "Reduce Interr.") : finalName
             }
 
             // If Focus remains active and the mode switches (e.g., DND -> Sleep), trigger an ON toast for the new mode.
@@ -685,18 +695,18 @@ enum FocusModeType: String, CaseIterable {
     
     var displayName: String {
         switch self {
-    case .doNotDisturb: return String(localized: "Do Not Disturb")
-        case .work: return "Work"
-        case .personal: return "Personal"
-        case .sleep: return "Sleep"
-        case .driving: return "Driving"
-        case .fitness: return "Fitness"
-        case .gaming: return "Gaming"
-        case .mindfulness: return "Mindfulness"
-        case .reading: return "Reading"
-        case .reduceInterruptions: return "Reduce Interr."
-        case .custom: return "Focus"
-        case .unknown: return "Focus Mode"
+        case .doNotDisturb: return String(localized: "Do Not Disturb")
+        case .work: return String(localized: "Work")
+        case .personal: return String(localized: "Personal")
+        case .sleep: return String(localized: "Sleep")
+        case .driving: return String(localized: "Driving")
+        case .fitness: return String(localized: "Fitness")
+        case .gaming: return String(localized: "Gaming")
+        case .mindfulness: return String(localized: "Mindfulness")
+        case .reading: return String(localized: "Reading")
+        case .reduceInterruptions: return String(localized: "Reduce Interr.")
+        case .custom: return String(localized: "Focus")
+        case .unknown: return String(localized: "Focus Mode")
         }
     }
     

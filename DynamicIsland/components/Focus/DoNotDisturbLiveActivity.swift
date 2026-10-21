@@ -188,7 +188,7 @@ struct DoNotDisturbLiveActivity: View {
 
     private var labelText: String {
         if focusToastMode {
-            return manager.isDoNotDisturbActive ? "On" : "Off"
+            return manager.isDoNotDisturbActive ? String(localized: "On") : String(localized: "Off")
         }
 
         let trimmed = manager.currentFocusModeName.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -196,10 +196,10 @@ struct DoNotDisturbLiveActivity: View {
             if !trimmed.isEmpty {
                 return trimmed
             } else if focusMode == .doNotDisturb {
-                return "Do Not Disturb"
+                return String(localized: "Do Not Disturb")
             } else {
                 let fallback = focusMode.displayName
-                return fallback.isEmpty ? "Focus" : fallback
+                return fallback.isEmpty ? String(localized: "Focus") : fallback
             }
         }
 
@@ -208,9 +208,9 @@ struct DoNotDisturbLiveActivity: View {
 
     private var accessibilityDescription: String {
         if manager.isDoNotDisturbActive {
-            return "Focus active: \(labelText)"
+            return String(format: String(localized: "Focus active: %@"), labelText)
         } else {
-            return "Focus inactive"
+            return String(localized: "Focus inactive")
         }
     }
 
@@ -520,7 +520,7 @@ private final class SymbolAvailabilityCache {
 }
 
 private enum FocusLabelMetrics {
-    static let baselineText = "Do Not Disturb"
+    static let baselineText = String(localized: "Do Not Disturb")
 
     static let baselineWidth: CGFloat = {
         #if canImport(AppKit)

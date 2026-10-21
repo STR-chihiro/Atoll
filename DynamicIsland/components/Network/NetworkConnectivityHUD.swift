@@ -169,7 +169,7 @@ struct NetworkConnectivityHUD: View {
                 )
 
             VStack(alignment: .trailing, spacing: 1) {
-                Text(isHotspot ? "Hotspot connected" : "Wi-Fi connected")
+                Text(isHotspot ? String(localized: "Hotspot connected") : String(localized: "Wi-Fi connected"))
                     .font(.system(size: 9, weight: .medium))
                     .foregroundStyle(.secondary)
                     .lineLimit(1)

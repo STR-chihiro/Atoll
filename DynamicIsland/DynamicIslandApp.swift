@@ -1126,17 +1126,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         let focusMenuItem = NSMenuItem(title: String(localized: "Focus"), action: nil, keyEquivalent: "")
         focusMenuItem.identifier = NSUserInterfaceItemIdentifier("Atoll.Focus.Menu")
-        let focusSubmenu = NSMenu(title: "Focus")
+        let focusSubmenu = NSMenu(title: String(localized: "Focus"))
 
         let withoutDevTools = NSMenuItem(
-            title: "Use without DevTools",
+            title: String(localized: "Use without DevTools"),
             action: #selector(selectFocusWithoutDevTools),
             keyEquivalent: ""
         )
         withoutDevTools.target = self
 
         let useDevTools = NSMenuItem(
-            title: "Use DevTools",
+            title: String(localized: "Use DevTools"),
             action: #selector(selectFocusUseDevTools),
             keyEquivalent: ""
         )
@@ -1152,17 +1152,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         let accessibilityMenuItem = NSMenuItem(title: String(localized: "Accessibility"), action: nil, keyEquivalent: "")
         accessibilityMenuItem.identifier = NSUserInterfaceItemIdentifier("Atoll.Accessibility.Menu")
-        let accessibilitySubmenu = NSMenu(title: "Accessibility")
+        let accessibilitySubmenu = NSMenu(title: String(localized: "Accessibility"))
 
         let requestAccessibility = NSMenuItem(
-            title: "Request Accessibility Access",
+            title: String(localized: "Request Accessibility Access"),
             action: #selector(requestAccessibilityAccess),
             keyEquivalent: ""
         )
         requestAccessibility.target = self
 
         let openAccessibility = NSMenuItem(
-            title: "Open Accessibility Settings",
+            title: String(localized: "Open Accessibility Settings"),
             action: #selector(openAccessibilitySettings),
             keyEquivalent: ""
         )
@@ -1175,24 +1175,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         let permissionsMenuItem = NSMenuItem(title: String(localized: "Permissions"), action: nil, keyEquivalent: "")
         permissionsMenuItem.identifier = NSUserInterfaceItemIdentifier("Atoll.Permissions.Menu")
-        let permissionsSubmenu = NSMenu(title: "Permissions")
+        let permissionsSubmenu = NSMenu(title: String(localized: "Permissions"))
 
         let requestFullDisk = NSMenuItem(
-            title: "Request Full Disk Access",
+            title: String(localized: "Request Full Disk Access"),
             action: #selector(requestFullDiskAccess),
             keyEquivalent: ""
         )
         requestFullDisk.target = self
 
         let openFullDisk = NSMenuItem(
-            title: "Open Full Disk Access Settings",
+            title: String(localized: "Open Full Disk Access Settings"),
             action: #selector(openFullDiskAccessSettings),
             keyEquivalent: ""
         )
         openFullDisk.target = self
 
         let openDevTools = NSMenuItem(
-            title: "Open Developer Tools Settings",
+            title: String(localized: "Open Developer Tools Settings"),
             action: #selector(openDeveloperToolsSettingsFromMenu),
             keyEquivalent: ""
         )
@@ -1207,11 +1207,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         let toolsMenuItem = NSMenuItem(title: String(localized: "Tools"), action: nil, keyEquivalent: "")
         toolsMenuItem.identifier = NSUserInterfaceItemIdentifier("Atoll.Tools.Menu")
-        let toolsSubmenu = NSMenu(title: "Tools")
+        let toolsSubmenu = NSMenu(title: String(localized: "Tools"))
 
         let loggingLevelItem = NSMenuItem(title: String(localized: "Logging Level"), action: nil, keyEquivalent: "")
         loggingLevelItem.identifier = NSUserInterfaceItemIdentifier("Atoll.Tools.LoggingLevel")
-        let loggingLevelSubmenu = NSMenu(title: "Logging Level")
+        let loggingLevelSubmenu = NSMenu(title: String(localized: "Logging Level"))
         
         // Dispatched by tag, so the titles are safe to localize.
         let levels: [(String, LogLevel)] = [
@@ -1245,10 +1245,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     private func preferredMenuInsertionIndex(in mainMenu: NSMenu) -> Int {
-        if let index = mainMenu.items.firstIndex(where: { $0.title == "Window" }) {
+        // System menu titles are localized. Match the English title and the
+        // catalog translation so the items still land before Window / Help.
+        let windowTitles: Set<String> = ["Window", String(localized: "Window")]
+        let helpTitles: Set<String> = ["Help", String(localized: "Help")]
+        if let index = mainMenu.items.firstIndex(where: { windowTitles.contains($0.title) }) {
             return index
         }
-        if let index = mainMenu.items.firstIndex(where: { $0.title == "Help" }) {
+        if let index = mainMenu.items.firstIndex(where: { helpTitles.contains($0.title) }) {
             return index
         }
         return max(mainMenu.numberOfItems, 0)

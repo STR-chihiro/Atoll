@@ -181,6 +181,8 @@ private struct SettingsSearchEntry: Identifiable {
     /// edit to make a setting searchable is also the one that routes it -- a
     /// setting missing from here was never reachable from search to begin with.
     let lockScreenSection: LockScreenSettingsSection?
+    /// English source title. Highlight ids and search identity stay on this value.
+    private let sourceTitle: String
 
     init(
         tab: SettingsTab,
@@ -190,13 +192,14 @@ private struct SettingsSearchEntry: Identifiable {
         lockScreenSection: LockScreenSettingsSection? = nil
     ) {
         self.tab = tab
-        self.title = title
+        self.sourceTitle = title
+        self.title = NSLocalizedString(title, comment: "")
         self.keywords = keywords
         self.highlightID = highlightID
         self.lockScreenSection = lockScreenSection
     }
 
-    var id: String { "\(tab.rawValue)-\(title)" }
+    var id: String { "\(tab.rawValue)-\(sourceTitle)" }
 }
 
 /// The two segments of the Lock Screen settings tab.
@@ -4730,7 +4733,7 @@ struct LiveActivitiesSettings: View {
                                 Circle()
                                     .fill(Color.purple)
                                     .frame(width: 8, height: 8)
-                                Text(doNotDisturbManager.currentFocusModeName.isEmpty ? "Focus Enabled" : doNotDisturbManager.currentFocusModeName)
+                                Text(doNotDisturbManager.currentFocusModeName.isEmpty ? String(localized: "Focus Enabled") : doNotDisturbManager.currentFocusModeName)
                                     .foregroundColor(.purple)
                             }
                         } else {

@@ -1,0 +1,17 @@
+"CFBundleDisplayName" = "Atoll";
+"NSAppleEventsUsageDescription" = "Atoll 使用 AppleScript 控制 Spotify、Apple Music 和備忘錄。";
+"NSAppleMusicUsageDescription" = "Atoll 使用 Apple Music 為鎖定畫面桌布取得動態封面。";
+"NSAudioCaptureUsageDescription" = "Atoll 需要音訊擷取權限，以顯示即時音樂波形並調整各個 App 的音量。音訊僅即時處理，不會被錄製或儲存。";
+"NSBluetoothAlwaysUsageDescription" = "Atoll 需要藍牙權限，以便在音訊裝置連接時進行偵測，並在 HUD 中顯示其電量。";
+"NSCalendarsFullAccessUsageDescription" = "在瀏海中顯示日曆事件。";
+"NSCalendarsUsageDescription" = "日曆模式需要此權限。";
+"NSCameraUsageDescription" = "鏡像模式需要使用相機。";
+"NSDesktopFolderUsageDescription" = "Atoll 需要取用權限，以便將截圖儲存到桌面。";
+"NSDocumentsFolderUsageDescription" = "Atoll 需要取用權限，以便儲存和讀取拖到暫存器的檔案。";
+"NSDownloadsFolderUsageDescription" = "Atoll 需要取用權限，以便讀取「下載項目」檔案夾中的檔案。";
+"NSLocationUsageDescription" = "Atoll 使用你的位置來顯示準確的鎖定畫面天氣。";
+"NSLocationWhenInUseUsageDescription" = "Atoll 使用你的位置來顯示準確的鎖定畫面天氣。";
+"NSMicrophoneUsageDescription" = "Atoll 需要麥克風權限，以便為 AI 助理錄製語音提問。";
+"NSRemindersFullAccessUsageDescription" = "Atoll 需要提醒事項權限來顯示你的提醒事項。";
+"NSRemindersUsageDescription" = "Atoll 需要提醒事項權限來顯示你的提醒事項。";
+"NSScreenCaptureUsageDescription" = "Atoll 需要螢幕錄製權限，以便為 AI 助理功能截取螢幕。";

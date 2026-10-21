@@ -286,7 +286,7 @@ final class LockScreenWidgetPreviewManager: ObservableObject {
             )
         }
         manager.isDoNotDisturbActive = true
-        manager.currentFocusModeName = "Do Not Disturb"
+        manager.currentFocusModeName = String(localized: "Do Not Disturb")
         manager.currentFocusModeIdentifier = "com.apple.donotdisturb"
     }
 

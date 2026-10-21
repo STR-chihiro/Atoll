@@ -58,8 +58,8 @@ struct FocusIndicator: View {
             baseName = trimmedName
         }
 
-        let finalName = focusMode == .doNotDisturb ? "Focus" : baseName
-        return "Focus active: \(finalName)"
+        let finalName = focusMode == .doNotDisturb ? String(localized: "Focus") : baseName
+        return String(format: String(localized: "Focus active: %@"), finalName)
     }
 }
 
