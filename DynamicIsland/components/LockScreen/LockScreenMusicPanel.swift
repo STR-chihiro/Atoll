@@ -485,7 +485,7 @@ struct LockScreenMusicPanel: View {
             GeometryReader { geo in
                 VStack(alignment: .leading, spacing: 1) {
                     MusicTitleMarqueeView(
-                        text: musicManager.songTitle.isEmpty ? "No Music Playing" : musicManager.songTitle,
+                        text: musicManager.songTitle.isEmpty ? String(localized: "No Music Playing") : musicManager.songTitle,
                         isExplicit: !musicManager.songTitle.isEmpty && musicManager.isCurrentTrackExplicit,
                         font: .system(size: 14, weight: .semibold),
                         nsFont: .headline,
@@ -504,7 +504,7 @@ struct LockScreenMusicPanel: View {
                         badgeCornerRadius: 4
                     )
 
-                    Text(musicManager.artistName.isEmpty ? "Unknown Artist" : musicManager.artistName)
+                    Text(musicManager.artistName.isEmpty ? String(localized: "Unknown Artist") : musicManager.artistName)
                         .font(.system(size: 12, weight: .medium))
                         .foregroundColor(artistLabelColor(factor: 0.6))
                         .lineLimit(1)
@@ -523,7 +523,7 @@ struct LockScreenMusicPanel: View {
             GeometryReader { geo in
                 VStack(alignment: .leading, spacing: 6) {
                     MusicTitleMarqueeView(
-                        text: musicManager.songTitle.isEmpty ? "No Music Playing" : musicManager.songTitle,
+                        text: musicManager.songTitle.isEmpty ? String(localized: "No Music Playing") : musicManager.songTitle,
                         isExplicit: !musicManager.songTitle.isEmpty && musicManager.isCurrentTrackExplicit,
                         font: .system(size: 21, weight: .semibold),
                         nsFont: .title2,
@@ -542,7 +542,7 @@ struct LockScreenMusicPanel: View {
                         badgeCornerRadius: 5
                     )
 
-                    Text(musicManager.artistName.isEmpty ? "Unknown Artist" : musicManager.artistName)
+                    Text(musicManager.artistName.isEmpty ? String(localized: "Unknown Artist") : musicManager.artistName)
                         .font(.system(size: 15, weight: .medium))
                         .foregroundColor(artistLabelColor(factor: 0.7))
                         .lineLimit(2)

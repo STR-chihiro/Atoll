@@ -1,0 +1,17 @@
+"CFBundleDisplayName" = "Atoll";
+"NSAppleEventsUsageDescription" = "Atoll 使用 AppleScript 控制 Spotify、Apple Music 和备忘录。";
+"NSAppleMusicUsageDescription" = "Atoll 使用 Apple Music 为锁屏壁纸获取动态封面。";
+"NSAudioCaptureUsageDescription" = "Atoll 需要音频捕捉权限，以显示实时音乐波形并调节各个应用的音量。音频仅实时处理，不会被录制或保存。";
+"NSBluetoothAlwaysUsageDescription" = "Atoll 需要蓝牙权限，以便在音频设备连接时进行检测，并在 HUD 中显示其电量。";
+"NSCalendarsFullAccessUsageDescription" = "在刘海中显示日历事件。";
+"NSCalendarsUsageDescription" = "日历模式需要此权限。";
+"NSCameraUsageDescription" = "镜像模式需要使用相机。";
+"NSDesktopFolderUsageDescription" = "Atoll 需要访问权限，以便将截图保存到桌面。";
+"NSDocumentsFolderUsageDescription" = "Atoll 需要访问权限，以便保存和读取拖到暂存器的文件。";
+"NSDownloadsFolderUsageDescription" = "Atoll 需要访问权限，以便读取“下载”文件夹中的文件。";
+"NSLocationUsageDescription" = "Atoll 使用你的位置来显示准确的锁屏天气。";
+"NSLocationWhenInUseUsageDescription" = "Atoll 使用你的位置来显示准确的锁屏天气。";
+"NSMicrophoneUsageDescription" = "Atoll 需要麦克风权限，以便为 AI 助手录制语音提问。";
+"NSRemindersFullAccessUsageDescription" = "Atoll 需要提醒事项权限来显示你的提醒事项。";
+"NSRemindersUsageDescription" = "Atoll 需要提醒事项权限来显示你的提醒事项。";
+"NSScreenCaptureUsageDescription" = "Atoll 需要屏幕录制权限，以便为 AI 助手功能截取屏幕。";
