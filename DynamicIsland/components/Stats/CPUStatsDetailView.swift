@@ -16,50 +16,132 @@
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
+import Defaults
 import SwiftUI
 
 struct CPUStatsDetailView: View {
     @ObservedObject private var statsManager = StatsManager.shared
-    @State private var topProcesses: [ProcessStats] = []
-    
-    private let systemColor = Color(red: 0.94, green: 0.32, blue: 0.28)
-    private let userColor = Color(red: 0.27, green: 0.52, blue: 0.97)
-    private let idleColor = Color.gray.opacity(0.28)
-    
+    @Default(.cpuTemperatureUnit) private var temperatureUnit
+
+    private let accent = StatsAccent.cpu
+    private let processLimit = 8
+
     var body: some View {
-        ScrollView {
-            VStack(spacing: 16) {
-                StatsCard(title: String(localized: "CPU Overview")) {
-                    CPUUsageDashboard(
-                        breakdown: statsManager.cpuBreakdown,
-                        loadAverage: statsManager.cpuLoadAverage,
-                        uptime: statsManager.cpuUptime,
-                        coreCount: statsManager.cpuCoreUsage.count,
-                        systemColor: systemColor,
-                        userColor: userColor,
-                        idleColor: idleColor,
-                        temperature: statsManager.cpuTemperature,
-                        frequency: statsManager.cpuFrequency
+        let layout = CPUCoreLayout.resolve(cores: statsManager.cpuCoreUsage)
+        let breakdown = statsManager.cpuBreakdown
+        StatsOverviewSurface(accent: accent) {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 12) {
+                    StatsOverviewHeader(
+                        symbol: "cpu",
+                        title: String(localized: "CPU Overview"),
+                        subtitle: String(localized: "Processor Load", defaultValue: "Processor Load"),
+                        accent: accent
+                    )
+                    StatsRingRow(
+                        leading: layout.leading.map { ($0.percent, $0.caption) },
+                        centerValue: StatsFormatting.percentage(breakdown.activeUsage),
+                        centerCaption: String(localized: "Total Usage", defaultValue: "Total Usage"),
+                        centerProgress: breakdown.activeUsage,
+                        trailing: layout.trailing.map { ($0.percent, $0.caption) },
+                        accent: accent
+                    )
+                    StatsHistoryCard(samples: statsManager.cpuHistory, accent: accent)
+                    if !layout.bars.isEmpty {
+                        StatsCoreBars(bars: layout.bars, accent: accent)
+                    }
+                    StatsLegendGrid(items: [
+                        StatsLegendItem(id: "user", color: accent.start, title: String(localized: "User"), value: StatsFormatting.percentage(breakdown.user)),
+                        StatsLegendItem(id: "system", color: accent.end, title: String(localized: "System"), value: StatsFormatting.percentage(breakdown.system)),
+                        StatsLegendItem(id: "idle", color: StatsPalette.idle, title: String(localized: "Idle"), value: StatsFormatting.percentage(breakdown.idle))
+                    ])
+                    StatsDetailCard(rows: detailRows(summary: layout.summary))
+                    StatsProcessSection(
+                        title: String(localized: "Top Processes"),
+                        trailing: String(localized: "Usage Share", defaultValue: "Usage"),
+                        rows: processRows,
+                        accent: accent
                     )
                 }
-
-                StatsCard(title: String(localized: "Top Processes")) {
-                    CPUProcessList(processes: topProcesses, accentColor: userColor)
-                }
-                
-                if !statsManager.cpuCoreUsage.isEmpty {
-                    StatsCard(title: String(localized: "Per-Core Usage")) {
-                        CPUCoreUsageGrid(cores: statsManager.cpuCoreUsage, accentColor: userColor)
-                    }
-                }
+                .padding(.horizontal, 22)
+                .padding(.top, 20)
+                .padding(.bottom, 16)
             }
-            .padding(16)
+            .scrollContentBackground(.hidden)
         }
-        .onReceive(statsManager.$topCPUProcesses) { processes in
-            topProcesses = Array(processes.prefix(8))
+    }
+
+    private var processRows: [StatsUsageRowModel] {
+        statsManager.topCPUProcesses.prefix(processLimit).enumerated().map { index, process in
+            StatsUsageRowModel(
+                id: "\(process.pid)-\(index)",
+                name: process.name,
+                metric: "",
+                share: StatsFormatting.percentage(process.cpuUsage),
+                fraction: StatsOverviewMetrics.barFraction(process.cpuUsage)
+            )
         }
-        .onAppear {
-            topProcesses = Array(statsManager.topCPUProcesses.prefix(8))
+    }
+
+    private func detailRows(summary: String) -> [StatsDetailRowModel] {
+        let load = statsManager.cpuLoadAverage
+        var rows: [StatsDetailRowModel] = [
+            StatsDetailRowModel(
+                id: "load",
+                label: String(localized: "Load averages", defaultValue: "Load averages"),
+                value: String(format: "%.2f · %.2f · %.2f", load.oneMinute, load.fiveMinutes, load.fifteenMinutes)
+            )
+        ]
+        if let chip = AppleHardwareInfo.shared.cpuName, !chip.isEmpty {
+            rows.append(StatsDetailRowModel(id: "chip", label: String(localized: "Chip", defaultValue: "Chip"), value: chip))
         }
+        rows.append(StatsDetailRowModel(
+            id: "cores",
+            label: String(localized: "CPU Cores", defaultValue: "Cores"),
+            value: summary
+        ))
+        if let frequency = statsManager.cpuFrequency {
+            rows.append(StatsDetailRowModel(
+                id: "frequency",
+                label: String(localized: "Frequency"),
+                value: frequencyText(frequency)
+            ))
+        }
+        rows.append(StatsDetailRowModel(
+            id: "temperature",
+            label: String(localized: "Temperature"),
+            value: temperatureText(statsManager.cpuTemperature.celsius)
+        ))
+        rows.append(StatsDetailRowModel(
+            id: "uptime",
+            label: String(localized: "Uptime"),
+            value: StatsFormatting.abbreviatedDuration(statsManager.cpuUptime)
+        ))
+        rows.append(StatsDetailRowModel(
+            id: "updated",
+            label: String(localized: "Last Update"),
+            value: StatsOverviewMetrics.timestamp(statsManager.lastUpdated)
+        ))
+        return rows
+    }
+
+    private func frequencyText(_ frequency: CPUFrequencyMetrics) -> String {
+        var parts: [String] = []
+        if let performance = frequency.pCoreGHz {
+            parts.append("P " + String(format: "%.1f", performance))
+        }
+        if let efficiency = frequency.eCoreGHz {
+            parts.append("E " + String(format: "%.1f", efficiency))
+        }
+        if parts.isEmpty {
+            return String(format: "%.2f GHz", frequency.overallGHz)
+        }
+        return parts.joined(separator: " · ") + " GHz"
+    }
+
+    private func temperatureText(_ celsius: Double?) -> String {
+        guard let celsius else { return "—" }
+        let display = temperatureUnit == .celsius ? celsius : celsius * 9.0 / 5.0 + 32.0
+        return String(format: "%.0f%@", display, temperatureUnit.symbol)
     }
 }

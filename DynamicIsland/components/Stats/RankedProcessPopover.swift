@@ -28,16 +28,21 @@ struct RankedProcessPopover: View {
     // Callback to notify parent about hover state
     var onHoverChange: ((Bool) -> Void)?
     
-    private var configuration: (width: CGFloat, minHeight: CGFloat, padding: CGFloat) {
+    private var usesGlassStyle: Bool {
         switch rankingType {
-        case .cpu:
-            return (420, 420, 0)
-        case .memory:
-            return (400, 380, 0)
-        case .gpu:
-            return (380, 360, 0)
+        case .cpu, .memory, .gpu:
+            return true
         case .network, .disk:
-            return (360, 320, 0)
+            return false
+        }
+    }
+
+    private var configuration: (width: CGFloat, minHeight: CGFloat, maxHeight: CGFloat?, padding: CGFloat) {
+        switch rankingType {
+        case .cpu, .memory, .gpu:
+            return (460, 680, 680, 0)
+        case .network, .disk:
+            return (360, 320, nil, 0)
         }
     }
     
@@ -45,19 +50,26 @@ struct RankedProcessPopover: View {
         popoverContent
             .padding(configuration.padding)
             .frame(width: configuration.width)
-            .frame(minHeight: configuration.minHeight)
-            .background(Color(NSColor.controlBackgroundColor))
-            .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
-            .shadow(color: .black.opacity(0.28), radius: 12, x: 0, y: 8)
+            .frame(minHeight: configuration.minHeight, maxHeight: configuration.maxHeight)
+            .background(usesGlassStyle ? Color.clear : Color(NSColor.controlBackgroundColor))
+            .clipShape(RoundedRectangle(cornerRadius: usesGlassStyle ? 24 : 14, style: .continuous))
+            .shadow(
+                color: .black.opacity(usesGlassStyle ? 0.55 : 0.28),
+                radius: usesGlassStyle ? 30 : 12,
+                x: 0,
+                y: usesGlassStyle ? 16 : 8
+            )
             .overlay(alignment: .topTrailing) {
                 Button(action: { dismiss() }) {
                     Image(systemName: "xmark.circle.fill")
-                        .font(.title3)
-                        .foregroundColor(.secondary)
-                        .padding(10)
+                        .font(usesGlassStyle ? Font.system(size: 16, weight: .semibold) : Font.title3)
+                        .symbolRenderingMode(.hierarchical)
+                        .foregroundColor(usesGlassStyle ? Color.white.opacity(0.55) : Color.secondary)
+                        .padding(usesGlassStyle ? 14 : 10)
                 }
-                .buttonStyle(PlainButtonStyle())
+                .buttonStyle(.plain)
             }
+            .modifier(StatsPopoverChrome(glass: usesGlassStyle))
             .overlay(alignment: .center) {
                 PopoverHoverSensor { hovering in
                     onHoverChange?(hovering)
@@ -80,6 +92,20 @@ struct RankedProcessPopover: View {
             NetworkStatsDetailView()
         case .disk:
             DiskStatsDetailView()
+        }
+    }
+}
+
+private struct StatsPopoverChrome: ViewModifier {
+    let glass: Bool
+
+    func body(content: Content) -> some View {
+        if glass {
+            content
+                .presentationBackground(.clear)
+                .presentationCornerRadius(24)
+        } else {
+            content
         }
     }
 }
