@@ -35,7 +35,7 @@ struct RankedProcessPopover: View {
         case .memory:
             return (400, 380, 0)
         case .gpu:
-            return (380, 360, 0)
+            return (420, 360, 0)
         case .network, .disk:
             return (360, 320, 0)
         }
@@ -52,11 +52,14 @@ struct RankedProcessPopover: View {
             .overlay(alignment: .topTrailing) {
                 Button(action: { dismiss() }) {
                     Image(systemName: "xmark.circle.fill")
-                        .font(.title3)
-                        .foregroundColor(.secondary)
-                        .padding(10)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 32, height: 32)
+                        .foregroundStyle(.secondary)
                 }
                 .buttonStyle(PlainButtonStyle())
+                .padding(8)
+                .accessibilityLabel(String(localized: "Close"))
             }
             .overlay(alignment: .center) {
                 PopoverHoverSensor { hovering in

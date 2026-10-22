@@ -341,11 +341,51 @@ struct GPUDeviceMetrics: Identifiable, Equatable {
     let memoryClock: Int?
     let cores: Int?
 
+    /// Marketing name shown in the GPU popover. Apple GPUs often report the
+    /// vendor twice ("Apple Apple"); those generic names are replaced with the
+    /// real chip name from `machdep.cpu.brand_string` (for example "Apple M1 Pro").
     var formattedVendorModel: String {
-        if let vendor {
-            return vendor == model ? model : "\(vendor) \(model)".trimmingCharacters(in: .whitespaces)
+        let joined = Self.joinedVendorModel(vendor: vendor, model: model)
+        guard Self.shouldReplaceWithAppleChipName(vendor: vendor, model: model, joined: joined),
+              let chip = AppleHardwareInfo.shared.cpuName?.trimmingCharacters(in: .whitespacesAndNewlines),
+              !chip.isEmpty else {
+            return joined
         }
-        return model
+        return chip
+    }
+
+    static func joinedVendorModel(vendor: String?, model: String) -> String {
+        let cleanModel = collapsedWords(model)
+        let cleanVendor = collapsedWords(vendor ?? "")
+        guard !cleanVendor.isEmpty else {
+            return cleanModel.isEmpty ? "GPU" : cleanModel
+        }
+        if cleanModel.isEmpty || cleanModel.compare(cleanVendor, options: .caseInsensitive) == .orderedSame {
+            return cleanVendor
+        }
+        if cleanModel.range(of: cleanVendor, options: [.caseInsensitive, .anchored]) != nil {
+            return cleanModel
+        }
+        return collapsedWords("\(cleanVendor) \(cleanModel)")
+    }
+
+    private static func shouldReplaceWithAppleChipName(vendor: String?, model: String, joined: String) -> Bool {
+        let haystack = "\(vendor ?? "") \(model)".lowercased()
+        guard haystack.contains("apple") || haystack.contains("agx") else { return false }
+        let generic: Set<String> = ["apple", "apple gpu", "apple graphics", "gpu", "agx"]
+        return generic.contains(joined.lowercased())
+    }
+
+    private static func collapsedWords(_ raw: String) -> String {
+        var words: [String] = []
+        for word in raw.split(whereSeparator: \.isWhitespace) {
+            let text = String(word)
+            if words.last?.caseInsensitiveCompare(text) == .orderedSame {
+                continue
+            }
+            words.append(text)
+        }
+        return words.joined(separator: " ")
     }
 
     var utilizationText: String {
