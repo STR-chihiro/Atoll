@@ -441,6 +441,8 @@ private enum SettingsSearchIndex {
         SettingsSearchEntry(tab: .stats, title: "Antigravity Provider", keywords: ["llm", "antigravity", "provider", "toggle"], highlightID: SettingsTab.stats.highlightID(for: "Antigravity Provider")),
         SettingsSearchEntry(tab: .stats, title: "New API Provider", keywords: ["llm", "new api", "newapi", "provider", "toggle"], highlightID: SettingsTab.stats.highlightID(for: "New API Provider")),
         SettingsSearchEntry(tab: .stats, title: "New API Accounts", keywords: ["llm", "new api", "newapi", "accounts", "key", "token"], highlightID: SettingsTab.stats.highlightID(for: "New API Accounts")),
+        SettingsSearchEntry(tab: .stats, title: "DeepSeek Provider", keywords: ["llm", "deepseek", "provider", "toggle", "balance"], highlightID: SettingsTab.stats.highlightID(for: "DeepSeek Provider")),
+        SettingsSearchEntry(tab: .stats, title: "DeepSeek Accounts", keywords: ["llm", "deepseek", "accounts", "key", "token", "balance"], highlightID: SettingsTab.stats.highlightID(for: "DeepSeek Accounts")),
         SettingsSearchEntry(tab: .stats, title: "Stop monitoring after closing the notch", keywords: ["stats", "auto stop"], highlightID: SettingsTab.stats.highlightID(for: "Stop monitoring after closing the notch")),
         SettingsSearchEntry(tab: .stats, title: "CPU Usage", keywords: ["cpu", "graph"], highlightID: SettingsTab.stats.highlightID(for: "CPU Usage")),
         SettingsSearchEntry(tab: .stats, title: "Temperature unit", keywords: ["cpu", "temperature", "celsius", "fahrenheit"], highlightID: SettingsTab.stats.highlightID(for: "Temperature unit")),
@@ -7976,6 +7978,7 @@ struct StatsSettings: View {
     @Default(.enableStatsFeature) var enableStatsFeature
     @Default(.enableLLMUsageFeature) var enableLLMUsageFeature
     @Default(.enableNewAPIProvider) var enableNewAPIProvider
+    @Default(.enableDeepSeekProvider) var enableDeepSeekProvider
     @Default(.statsStopWhenNotchCloses) var statsStopWhenNotchCloses
     @Default(.statsUpdateInterval) var statsUpdateInterval
     @Default(.showCpuGraph) var showCpuGraph
@@ -7989,6 +7992,11 @@ struct StatsSettings: View {
     @State private var editingNewAPIAccount: NewAPIAccount?
     @State private var accountPendingDeletion: NewAPIAccount?
     @State private var newAPIAccountErrorMessage: String?
+    @State private var deepSeekAccounts = Defaults[.deepSeekAccounts]
+    @State private var isDeepSeekEditorPresented = false
+    @State private var editingDeepSeekAccount: DeepSeekAccount?
+    @State private var deepSeekAccountPendingDeletion: DeepSeekAccount?
+    @State private var deepSeekAccountErrorMessage: String?
 
     private func highlightID(_ title: String) -> String {
         SettingsTab.stats.highlightID(for: title)
@@ -8070,6 +8078,14 @@ struct StatsSettings: View {
                     .onChange(of: enableNewAPIProvider) { _, _ in
                         LLMUsageManager.shared.refreshAll(force: true)
                     }
+
+                    Defaults.Toggle(key: .enableDeepSeekProvider) {
+                        Text("DeepSeek")
+                    }
+                    .settingsHighlight(id: highlightID("DeepSeek Provider"))
+                    .onChange(of: enableDeepSeekProvider) { _, _ in
+                        LLMUsageManager.shared.refreshAll(force: true)
+                    }
                 } header: {
                     Text("LLM Providers")
                 } footer: {
@@ -8130,6 +8146,62 @@ struct StatsSettings: View {
                     Text("New API Accounts")
                 } footer: {
                     Text("API keys are stored in the macOS Keychain. Balance and usage are shown in the quota units reported by your New API server.")
+                        .multilineTextAlignment(.trailing)
+                        .foregroundStyle(.secondary)
+                        .font(.caption)
+                }
+
+                Section {
+                    if deepSeekAccounts.isEmpty {
+                        Text("Add one or more DeepSeek accounts to monitor their balance.")
+                            .foregroundStyle(.secondary)
+                            .font(.caption)
+                    } else {
+                        ForEach(deepSeekAccounts) { account in
+                            HStack(spacing: 10) {
+                                VStack(alignment: .leading, spacing: 2) {
+                                    Text(account.name)
+                                    Text(account.baseURL)
+                                        .font(.caption)
+                                        .foregroundStyle(.secondary)
+                                        .lineLimit(1)
+                                        .truncationMode(.middle)
+                                }
+
+                                Spacer()
+
+                                Button {
+                                    editingDeepSeekAccount = account
+                                    isDeepSeekEditorPresented = true
+                                } label: {
+                                    Image(systemName: "pencil")
+                                }
+                                .buttonStyle(.borderless)
+                                .help(String(localized: "Edit DeepSeek account"))
+
+                                Button(role: .destructive) {
+                                    deepSeekAccountPendingDeletion = account
+                                } label: {
+                                    Image(systemName: "trash")
+                                }
+                                .buttonStyle(.borderless)
+                                .help(String(localized: "Delete DeepSeek account"))
+                            }
+                        }
+                    }
+
+                    Button {
+                        editingDeepSeekAccount = nil
+                        isDeepSeekEditorPresented = true
+                    } label: {
+                        Label("Add DeepSeek Account", systemImage: "plus")
+                    }
+                    .buttonStyle(.bordered)
+                    .settingsHighlight(id: highlightID("DeepSeek Accounts"))
+                } header: {
+                    Text("DeepSeek Accounts")
+                } footer: {
+                    Text("API keys are stored in the macOS Keychain. Use this for the official DeepSeek API, not a New API server. The Usage tab shows the balance from GET /user/balance.")
                         .multilineTextAlignment(.trailing)
                         .foregroundStyle(.secondary)
                         .font(.caption)
@@ -8337,6 +8409,7 @@ struct StatsSettings: View {
         .navigationTitle("Stats")
         .onAppear {
             newAPIAccounts = Defaults[.newAPIAccounts]
+            deepSeekAccounts = Defaults[.deepSeekAccounts]
         }
         .sheet(isPresented: $isNewAPIEditorPresented) {
             NewAPIAccountEditor(account: editingNewAPIAccount) { account, apiKey in
@@ -8377,6 +8450,122 @@ struct StatsSettings: View {
             Button("OK", role: .cancel) { newAPIAccountErrorMessage = nil }
         } message: {
             Text(newAPIAccountErrorMessage ?? "An unknown error occurred.")
+        }
+        .sheet(isPresented: $isDeepSeekEditorPresented) {
+            DeepSeekAccountEditor(account: editingDeepSeekAccount) { account, apiKey in
+                try DeepSeekAccountStore.upsert(account, apiKey: apiKey)
+                deepSeekAccounts = Defaults[.deepSeekAccounts]
+                if !Defaults[.enableDeepSeekProvider] {
+                    Defaults[.enableDeepSeekProvider] = true
+                }
+                LLMUsageManager.shared.refreshAll(force: true)
+                isDeepSeekEditorPresented = false
+            }
+        }
+        .confirmationDialog(
+            "Delete DeepSeek account?",
+            isPresented: Binding(
+                get: { deepSeekAccountPendingDeletion != nil },
+                set: { if !$0 { deepSeekAccountPendingDeletion = nil } }
+            ),
+            presenting: deepSeekAccountPendingDeletion
+        ) { account in
+            Button("Delete \(account.name)", role: .destructive) {
+                do {
+                    try DeepSeekAccountStore.delete(account)
+                    deepSeekAccounts = Defaults[.deepSeekAccounts]
+                    LLMUsageManager.shared.refreshAll(force: true)
+                    deepSeekAccountPendingDeletion = nil
+                } catch {
+                    deepSeekAccountPendingDeletion = nil
+                    deepSeekAccountErrorMessage = String(localized: "Failed to delete the DeepSeek account.") + " " + error.localizedDescription
+                }
+            }
+            Button("Cancel", role: .cancel) {
+                deepSeekAccountPendingDeletion = nil
+            }
+        } message: { account in
+            Text("This removes the DeepSeek account \(account.name) and its stored API key from Atoll.")
+        }
+        .alert("DeepSeek Account Error", isPresented: Binding(
+            get: { deepSeekAccountErrorMessage != nil },
+            set: { if !$0 { deepSeekAccountErrorMessage = nil } }
+        )) {
+            Button("OK", role: .cancel) { deepSeekAccountErrorMessage = nil }
+        } message: {
+            Text(deepSeekAccountErrorMessage ?? "An unknown error occurred.")
+        }
+    }
+}
+
+private struct DeepSeekAccountEditor: View {
+    let account: DeepSeekAccount?
+    let onSave: (DeepSeekAccount, String) throws -> Void
+
+    @Environment(\.dismiss) private var dismiss
+    @State private var name: String
+    @State private var baseURL: String
+    @State private var apiKey: String
+    @State private var errorMessage: String?
+
+    init(account: DeepSeekAccount?, onSave: @escaping (DeepSeekAccount, String) throws -> Void) {
+        self.account = account
+        self.onSave = onSave
+        _name = State(initialValue: account?.name ?? "")
+        _baseURL = State(initialValue: account?.baseURL ?? DeepSeekAccount.defaultBaseURL)
+        _apiKey = State(initialValue: account.map { DeepSeekKeychain.read(accountID: $0.id) ?? "" } ?? "")
+    }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            Text(account == nil ? "Add DeepSeek Account" : "Edit DeepSeek Account")
+                .font(.title3.weight(.semibold))
+
+            Form {
+                TextField("Account name", text: $name)
+                TextField("Base URL", text: $baseURL)
+                    .textContentType(.URL)
+                SecureField("API key", text: $apiKey)
+                    .textContentType(.password)
+            }
+            .formStyle(.grouped)
+            .frame(width: 420)
+
+            if let errorMessage {
+                Text(errorMessage)
+                    .font(.caption)
+                    .foregroundStyle(.red)
+            }
+
+            HStack {
+                Spacer()
+                Button("Cancel") {
+                    dismiss()
+                }
+                .keyboardShortcut(.cancelAction)
+
+                Button("Save") {
+                    save()
+                }
+                .buttonStyle(.borderedProminent)
+                .keyboardShortcut(.defaultAction)
+            }
+        }
+        .padding(20)
+        .frame(width: 470)
+    }
+
+    private func save() {
+        let updated = DeepSeekAccount(
+            id: account?.id ?? UUID(),
+            name: name,
+            baseURL: baseURL
+        )
+        do {
+            try onSave(updated, apiKey)
+            dismiss()
+        } catch {
+            errorMessage = error.localizedDescription
         }
     }
 }

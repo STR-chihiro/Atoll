@@ -1,6 +1,470 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "API key" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API 密钥"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API 金鑰"
+          }
+        }
+      }
+    },
+    "API keys are stored in the macOS Keychain. Use this for the official DeepSeek API, not a New API server. The Usage tab shows the balance from GET /user/balance." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API 密钥保存在 macOS 钥匙串中。请在这里添加官方 DeepSeek API，而不是 New API 服务器。用量标签页会显示 GET /user/balance 返回的余额。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API 金鑰儲存在 macOS 鑰匙圈中。請在這裡新增官方 DeepSeek API，而不是 New API 伺服器。用量分頁會顯示 GET /user/balance 傳回的餘額。"
+          }
+        }
+      }
+    },
+    "Account name" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "账户名称"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "帳戶名稱"
+          }
+        }
+      }
+    },
+    "Add DeepSeek Account" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加 DeepSeek 账户"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新增 DeepSeek 帳戶"
+          }
+        }
+      }
+    },
+    "Add one or more DeepSeek accounts to monitor their balance." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加一个或多个 DeepSeek 账户以监控余额。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新增一個或多個 DeepSeek 帳戶以監控餘額。"
+          }
+        }
+      }
+    },
+    "Balance" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "余额"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "餘額"
+          }
+        }
+      }
+    },
+    "Base URL" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "基础 URL"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "基礎 URL"
+          }
+        }
+      }
+    },
+    "DeepSeek" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DeepSeek"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DeepSeek"
+          }
+        }
+      }
+    },
+    "DeepSeek API key not configured" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尚未配置 DeepSeek API 密钥"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尚未設定 DeepSeek API 金鑰"
+          }
+        }
+      }
+    },
+    "DeepSeek Account Error" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DeepSeek 账户错误"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DeepSeek 帳戶錯誤"
+          }
+        }
+      }
+    },
+    "DeepSeek Accounts" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DeepSeek 账户"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DeepSeek 帳戶"
+          }
+        }
+      }
+    },
+    "DeepSeek Provider" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DeepSeek 提供商"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DeepSeek 服務供應商"
+          }
+        }
+      }
+    },
+    "DeepSeek account is unavailable" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DeepSeek 账户不可用"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DeepSeek 帳戶無法使用"
+          }
+        }
+      }
+    },
+    "DeepSeek request failed" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DeepSeek 请求失败"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DeepSeek 請求失敗"
+          }
+        }
+      }
+    },
+    "DeepSeek request failed (%d)" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DeepSeek 请求失败（%d）"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DeepSeek 請求失敗（%d）"
+          }
+        }
+      }
+    },
+    "DeepSeek returned an invalid response" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DeepSeek 返回了无效响应"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DeepSeek 傳回了無效回應"
+          }
+        }
+      }
+    },
+    "DeepSeek returned no balance" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DeepSeek 未返回余额"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DeepSeek 未傳回餘額"
+          }
+        }
+      }
+    },
+    "Delete DeepSeek account" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "删除 DeepSeek 账户"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刪除 DeepSeek 帳戶"
+          }
+        }
+      }
+    },
+    "Delete DeepSeek account?" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "删除 DeepSeek 账户？"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刪除 DeepSeek 帳戶？"
+          }
+        }
+      }
+    },
+    "Edit DeepSeek Account" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "编辑 DeepSeek 账户"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "編輯 DeepSeek 帳戶"
+          }
+        }
+      }
+    },
+    "Edit DeepSeek account" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "编辑 DeepSeek 账户"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "編輯 DeepSeek 帳戶"
+          }
+        }
+      }
+    },
+    "Enter a name for this DeepSeek account." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请为这个 DeepSeek 账户输入名称。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請為這個 DeepSeek 帳戶輸入名稱。"
+          }
+        }
+      }
+    },
+    "Enter a valid DeepSeek URL, including http:// or https://." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请输入有效的 DeepSeek 地址，需包含 http:// 或 https://。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請輸入有效的 DeepSeek 網址，需包含 http:// 或 https://。"
+          }
+        }
+      }
+    },
+    "Enter an API key for this DeepSeek account." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请为这个 DeepSeek 账户输入 API 密钥。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請為這個 DeepSeek 帳戶輸入 API 金鑰。"
+          }
+        }
+      }
+    },
+    "Failed to delete the DeepSeek account." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "删除 DeepSeek 账户失败。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刪除 DeepSeek 帳戶失敗。"
+          }
+        }
+      }
+    },
+    "Granted" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "赠送余额"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "贈送餘額"
+          }
+        }
+      }
+    },
+    "Invalid DeepSeek URL" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DeepSeek 地址无效"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DeepSeek 網址無效"
+          }
+        }
+      }
+    },
+    "Invalid DeepSeek request URL" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DeepSeek 请求地址无效"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DeepSeek 請求網址無效"
+          }
+        }
+      }
+    },
+    "No DeepSeek accounts configured" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尚未配置 DeepSeek 账户"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尚未設定 DeepSeek 帳戶"
+          }
+        }
+      }
+    },
     "Pinned lyric context" : {
       "comment" : "Pinned lyrics setting in Media settings.",
       "localizations" : {
@@ -74355,6 +74819,22 @@
         }
       }
     },
+    "This removes the DeepSeek account %@ and its stored API key from Atoll." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这将从 Atoll 中移除 DeepSeek 账户 %@ 及其已保存的 API 密钥。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "這會從 Atoll 移除 DeepSeek 帳戶 %@ 及其已儲存的 API 金鑰。"
+          }
+        }
+      }
+    },
     "Tiler" : {
       "localizations" : {
         "ko" : {
@@ -75794,6 +76274,22 @@
         }
       }
     },
+    "Topped up" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "充值余额"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "充值餘額"
+          }
+        }
+      }
+    },
     "Total" : {
       "localizations" : {
         "ko" : {
@@ -76671,6 +77167,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "녹화를 중지할 수 없습니다. Command-Control-Esc 또는 macOS 녹화 메뉴를 사용하세요."
+          }
+        }
+      }
+    },
+    "Unable to store the DeepSeek API key (Keychain status %d)." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法将 DeepSeek API 密钥存入钥匙串（状态 %d）。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無法將 DeepSeek API 金鑰存入鑰匙圈（狀態 %d）。"
           }
         }
       }

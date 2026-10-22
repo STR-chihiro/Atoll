@@ -83,6 +83,8 @@ struct NotchLLMUsageView: View {
             case .success(let snap):
                 if provider == .newAPI {
                     newAPISuccess(snap)
+                } else if provider == .deepseek {
+                    deepSeekSuccess(snap)
                 } else {
                     success(snap, provider: provider)
                 }
@@ -203,6 +205,71 @@ struct NotchLLMUsageView: View {
                     .padding(.bottom, 2)
                     .overlay(alignment: .bottom) {
                         if account.id != snap.newAPIAccounts.last?.id {
+                            Rectangle()
+                                .fill(.white.opacity(0.1))
+                                .frame(height: 1)
+                        }
+                    }
+                }
+            }
+        }
+        .frame(height: 135)
+    }
+
+    private func deepSeekSuccess(_ snap: UsageSnapshot) -> some View {
+        ScrollView(.vertical, showsIndicators: false) {
+            VStack(alignment: .leading, spacing: 8) {
+                ForEach(snap.deepSeekAccounts) { account in
+                    VStack(alignment: .leading, spacing: 4) {
+                        HStack(spacing: 6) {
+                            Text(account.name)
+                                .font(.caption.weight(.semibold))
+                                .lineLimit(1)
+                            Spacer()
+                            if account.errorMessage != nil {
+                                Image(systemName: "exclamationmark.triangle.fill")
+                                    .font(.caption2)
+                                    .foregroundStyle(.orange)
+                                    .help(account.errorMessage ?? String(localized: "DeepSeek account is unavailable"))
+                            }
+                        }
+
+                        if account.balances.isEmpty {
+                            Text(account.errorMessage ?? String(localized: "DeepSeek returned no balance"))
+                                .font(.caption2)
+                                .foregroundStyle(.orange)
+                                .lineLimit(3)
+                        } else {
+                            ForEach(account.balances) { balance in
+                                VStack(alignment: .leading, spacing: 2) {
+                                    HStack(alignment: .firstTextBaseline, spacing: 6) {
+                                        Text(String(localized: "Balance"))
+                                            .font(.caption2)
+                                            .foregroundStyle(.secondary)
+                                        Text("\(balance.totalBalance) \(balance.currency)")
+                                            .font(.system(size: 15, weight: .bold, design: .rounded))
+                                            .monospacedDigit()
+                                            .lineLimit(1)
+                                            .minimumScaleFactor(0.7)
+                                    }
+                                    Text("\(String(localized: "Granted")) \(balance.grantedBalance) · \(String(localized: "Topped up")) \(balance.toppedUpBalance)")
+                                        .font(.caption2)
+                                        .foregroundStyle(.secondary)
+                                        .lineLimit(1)
+                                        .minimumScaleFactor(0.7)
+                                }
+                            }
+                            if let errorMessage = account.errorMessage {
+                                Text(errorMessage)
+                                    .font(.caption2)
+                                    .foregroundStyle(.orange)
+                                    .lineLimit(2)
+                            }
+                        }
+                    }
+                    .padding(.bottom, 2)
+                    .overlay(alignment: .bottom) {
+                        if account.id != snap.deepSeekAccounts.last?.id {
                             Rectangle()
                                 .fill(.white.opacity(0.1))
                                 .frame(height: 1)
