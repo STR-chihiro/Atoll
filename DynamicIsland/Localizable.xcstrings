@@ -40576,6 +40576,22 @@
         }
       }
     },
+    "Last %d seconds" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "近 %d 秒"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "近 %d 秒"
+          }
+        }
+      }
+    },
     "Last Update" : {
       "localizations" : {
         "ko" : {
@@ -41576,6 +41592,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "透過分散式通知監聽專注模式工作階段變化"
+          }
+        }
+      }
+    },
+    "Live" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "实时"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "即時"
           }
         }
       }
@@ -83518,13 +83550,13 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "stats_resource_active"
+            "value" : "活跃"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "stats_resource_active"
+            "value" : "活躍"
           }
         }
       }

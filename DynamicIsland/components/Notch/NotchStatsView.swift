@@ -110,7 +110,7 @@ struct NotchStatsView: View {
                 title: String(localized: "GPU"),
                 value: statsManager.gpuUsageString,
                 data: statsManager.gpuHistory,
-                color: .purple,
+                color: StatsPalette.coolPurple,
                 icon: "display",
                 rankingType: .gpu
             ))
@@ -215,10 +215,13 @@ struct NotchStatsView: View {
             Button(action: {
                 handleGraphClick(for: graphData)
             }) {
-                UnifiedStatsCard(graphData: graphData)
+                UnifiedStatsCard(
+                    graphData: graphData,
+                    isSelected: isGraphSelected(graphData)
+                )
             }
             .buttonStyle(PlainButtonStyle())
-            .popover(isPresented: bindingForGraph(graphData)) {
+            .popover(isPresented: bindingForGraph(graphData), attachmentAnchor: .point(.bottom), arrowEdge: .top) {
                 RankedProcessPopover(
                     rankingType: rankingType,
                     onHoverChange: { hovering in
@@ -303,6 +306,10 @@ struct NotchStatsView: View {
 
     private func rankingTypeForGraph(_ graphData: GraphData) -> ProcessRankingType? {
         graphData.rankingType
+    }
+
+    private func isGraphSelected(_ graphData: GraphData) -> Bool {
+        graphData.rankingType == .gpu && showingGPUPopover
     }
     
     // Helper function to create graph views using unified component
@@ -424,6 +431,7 @@ struct NotchStatsView: View {
 // Unified Stats Card Component - handles both single and dual data types, matches boring.notch sizing
 struct UnifiedStatsCard: View {
     let graphData: GraphData
+    var isSelected: Bool = false
     @State private var isHovered = false
     
     var body: some View {
@@ -439,7 +447,13 @@ struct UnifiedStatsCard: View {
                     .fontWeight(.medium)
                     .foregroundStyle(Color.white.opacity(0.8))
                 
-                Spacer()
+                Spacer(minLength: 0)
+
+                if isSelected {
+                    Image(systemName: "arrow.up.right")
+                        .font(.system(size: 9, weight: .bold))
+                        .foregroundStyle(.white)
+                }
             }
             
             // Values section - same height for every card so the grid boxes match
@@ -484,23 +498,17 @@ struct UnifiedStatsCard: View {
                 }
             }
             .frame(height: 36) // Match boring.notch exactly - reduced from 50
-            
-            // Click hint - shown for graphs that open popovers
-            if graphData.rankingType != nil {
-                Text("Click for details")
-                    .font(.caption2)
-                    .foregroundStyle(Color.white.opacity(0.75))
-                    .opacity(isHovered ? 1.0 : 0.0)
-                    .animation(.easeInOut(duration: 0.2), value: isHovered)
-            }
         }
         .padding(8) // Match boring.notch padding - reduced from 10
         .background(
             RoundedRectangle(cornerRadius: 8)
-                .fill(Color.white.opacity(0.08))
+                .fill(isSelected ? StatsPalette.coolPurple.opacity(0.32) : Color.white.opacity(0.08))
                 .overlay(
                     RoundedRectangle(cornerRadius: 8)
-                        .stroke(Color.white.opacity(isHovered ? 0.45 : 0.18), lineWidth: 1)
+                        .stroke(
+                            isSelected ? StatsPalette.coolPurple : Color.white.opacity(isHovered ? 0.45 : 0.18),
+                            lineWidth: isSelected ? 1.5 : 1
+                        )
                 )
         )
         .scaleEffect(isHovered ? 1.02 : 1.0)

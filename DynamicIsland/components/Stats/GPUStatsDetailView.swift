@@ -16,32 +16,34 @@
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
+import Defaults
 import SwiftUI
 
 struct GPUStatsDetailView: View {
     @ObservedObject private var statsManager = StatsManager.shared
+    @Default(.statsUpdateInterval) private var statsUpdateInterval
     @State private var topProcesses: [ProcessStats] = []
-    
-    private let accentColor = Color.purple
+
+    private let accentColor = StatsPalette.coolPurple
     private let cardBackground = Color(nsColor: .windowBackgroundColor).opacity(0.65)
     private let processDisplayLimit = 8
-    
+
     var body: some View {
         ScrollView {
             VStack(spacing: 16) {
                 StatsCard(title: String(localized: "GPU Overview"), padding: 16, background: cardBackground, cornerRadius: 12) {
                     GPUUsageDashboard(
                         usage: statsManager.gpuUsage,
-                        breakdown: statsManager.gpuBreakdown,
+                        render: renderEngineUtilization,
+                        tiler: tilerUtilization,
+                        history: statsManager.gpuHistory,
+                        sampleInterval: statsUpdateInterval,
                         averageUsage: statsManager.avgGpuUsage,
-                        lastUpdated: statsManager.lastUpdated,
-                        accentColor: accentColor,
-                        primaryDevice: statsManager.gpuDevices.first
+                        coreCount: statsManager.gpuDevices.first?.cores,
+                        chipName: statsManager.gpuDevices.first?.formattedVendorModel,
+                        processes: topProcesses,
+                        accentColor: accentColor
                     )
-                }
-                
-                StatsCard(title: String(localized: "Top Processes"), padding: 16, background: cardBackground, cornerRadius: 12) {
-                    CPUProcessList(processes: topProcesses, accentColor: accentColor, displayLimit: processDisplayLimit)
                 }
 
                 if !statsManager.gpuDevices.isEmpty {
@@ -51,104 +53,26 @@ struct GPUStatsDetailView: View {
                 }
             }
             .padding(16)
+            .padding(.trailing, 28)
         }
-        .frame(minWidth: 360, minHeight: 380)
+        .frame(maxWidth: .infinity)
         .onAppear(perform: refreshProcesses)
         .onReceive(statsManager.$lastUpdated) { _ in
             refreshProcesses()
         }
     }
-    
+
     private func refreshProcesses() {
         let processes = statsManager.getProcessesRankedByGPU()
         topProcesses = Array(processes.prefix(processDisplayLimit))
     }
-}
 
-private struct GPUUsageDashboard: View {
-    let usage: Double
-    let breakdown: GPUBreakdown
-    let averageUsage: Double
-    let lastUpdated: Date
-    let accentColor: Color
-    let primaryDevice: GPUDeviceMetrics?
-    
-    var body: some View {
-        ViewThatFits(in: .horizontal) {
-            HStack(alignment: .top, spacing: 20) {
-                leftColumn
-                breakdownAndMeta
-            }
-            VStack(alignment: .leading, spacing: 20) {
-                leftColumn
-                breakdownAndMeta
-            }
-        }
-    }
-    
-    private func formattedTimestamp(_ date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .none
-        formatter.timeStyle = .medium
-        return formatter.string(from: date)
-    }
-
-    private var leftColumn: some View {
-        GPUEngineGauges(
-            usage: usage,
-            render: renderEngineUtilization,
-            tiler: tilerUtilization,
-            accentColor: accentColor
-        )
-        .frame(maxWidth: .infinity, alignment: .leading)
-    }
-
-    private var breakdownAndMeta: some View {
-        ViewThatFits(in: .horizontal) {
-            HStack(alignment: .top, spacing: 20) {
-                breakdownSection
-                metaSection
-            }
-            VStack(alignment: .leading, spacing: 16) {
-                breakdownSection
-                Divider().padding(.vertical, 4)
-                metaSection
-            }
-        }
-    }
-
-    private var breakdownSection: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            DetailRow(color: accentColor.opacity(0.9), label: String(localized: "Render"), value: StatsFormatting.percentage(breakdown.render))
-            DetailRow(color: accentColor.opacity(0.7), label: String(localized: "Compute"), value: StatsFormatting.percentage(breakdown.compute))
-            DetailRow(color: accentColor.opacity(0.55), label: String(localized: "Video"), value: StatsFormatting.percentage(breakdown.video))
-            DetailRow(color: accentColor.opacity(0.45), label: String(localized: "Other"), value: StatsFormatting.percentage(breakdown.other))
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-    }
-
-    private var metaSection: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text("Averages")
-                .font(.caption)
-                .foregroundColor(.secondary)
-            DetailRow(color: nil, label: String(localized: "Session Avg"), value: StatsFormatting.percentage(averageUsage))
-            DetailRow(color: nil, label: String(localized: "Last Update"), value: formattedTimestamp(lastUpdated))
-            if let device = primaryDevice {
-                Divider().padding(.vertical, 4)
-                DetailRow(color: nil, label: String(localized: "Active GPU"), value: device.formattedVendorModel)
-                DetailRow(color: nil, label: String(localized: "Status"), value: device.isActive ? String(localized: "Active") : String(localized: "Idle"))
-                DetailRow(color: nil, label: String(localized: "Temperature"), value: device.temperatureText)
-                if let cores = device.cores {
-                    DetailRow(color: nil, label: String(localized: "Cores"), value: "\(cores)")
-                }
-            }
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
+    private var primaryDevice: GPUDeviceMetrics? {
+        statsManager.gpuDevices.first
     }
 
     private var renderEngineUtilization: Double? {
-        primaryDevice?.renderUtilization ?? breakdown.render
+        primaryDevice?.renderUtilization ?? statsManager.gpuBreakdown.render
     }
 
     private var tilerUtilization: Double? {
@@ -156,25 +80,78 @@ private struct GPUUsageDashboard: View {
     }
 }
 
-private struct GPUEngineGauges: View {
+private struct GPUUsageDashboard: View {
     let usage: Double
     let render: Double?
     let tiler: Double?
+    let history: [Double]
+    let sampleInterval: Double
+    let averageUsage: Double
+    let coreCount: Int?
+    let chipName: String?
+    let processes: [ProcessStats]
     let accentColor: Color
-    private let ringDiameter: CGFloat = 112
-    private let ringLineWidth: CGFloat = 12
+
+    private let ringDiameter: CGFloat = 132
+    private let ringLineWidth: CGFloat = 5
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text("Engine Utilization")
+        VStack(alignment: .leading, spacing: 16) {
+            header
+            GPUUsageRing(usage: usage, accentColor: accentColor, diameter: ringDiameter, lineWidth: ringLineWidth)
+                .frame(maxWidth: .infinity)
+            Text(engineCaption)
                 .font(.caption)
-                .foregroundColor(.secondary)
-            HStack(alignment: .center, spacing: 18) {
-                EngineGaugeView(title: String(localized: "Render"), value: render, tint: accentColor, size: 72)
-                GPUUsageRing(usage: usage, accentColor: accentColor, diameter: ringDiameter, lineWidth: ringLineWidth)
-                EngineGaugeView(title: String(localized: "Tiler"), value: tiler, tint: accentColor.opacity(0.75), size: 72)
-            }
-            .frame(maxWidth: .infinity, alignment: .center)
+                .foregroundStyle(.secondary)
+                .frame(maxWidth: .infinity, alignment: .center)
+                .multilineTextAlignment(.center)
+            GPUPeakLineChart(values: history, sampleInterval: sampleInterval, accentColor: accentColor)
+            GPUProcessSection(processes: processes, accentColor: accentColor)
+            summaryCards
+        }
+    }
+
+    private var header: some View {
+        HStack(alignment: .center, spacing: 8) {
+            Text(subtitle)
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
+            Spacer(minLength: 8)
+            Text(String(localized: "Live"))
+                .font(.caption2.weight(.semibold))
+                .foregroundStyle(accentColor)
+                .padding(.horizontal, 8)
+                .padding(.vertical, 3)
+                .background(Capsule().fill(accentColor.opacity(0.14)))
+        }
+    }
+
+    private var subtitle: String {
+        let engine = String(localized: "Engine Utilization")
+        guard let chipName, !chipName.isEmpty else { return engine }
+        return "\(chipName) · \(engine)"
+    }
+
+    private var engineCaption: String {
+        let renderText = render.map { StatsFormatting.percentage($0) } ?? "—"
+        let tilerText = tiler.map { StatsFormatting.percentage($0) } ?? "—"
+        return "\(String(localized: "Render")) \(renderText)  \(String(localized: "Tiler")) \(tilerText)"
+    }
+
+    private var summaryCards: some View {
+        HStack(spacing: 10) {
+            GPUSummaryCard(
+                title: String(localized: "Session Avg"),
+                value: StatsFormatting.percentage(averageUsage),
+                accentColor: accentColor
+            )
+            GPUSummaryCard(
+                title: String(localized: "Cores"),
+                value: coreCount.map { String($0) } ?? "—",
+                accentColor: accentColor
+            )
         }
     }
 }
@@ -182,64 +159,240 @@ private struct GPUEngineGauges: View {
 private struct GPUUsageRing: View {
     let usage: Double
     let accentColor: Color
-    var diameter: CGFloat = 108
-    var lineWidth: CGFloat = 12
+    var diameter: CGFloat = 132
+    var lineWidth: CGFloat = 5
 
     var body: some View {
+        let fraction = min(max(usage / 100, 0), 1)
         ZStack {
             Circle()
-                .stroke(accentColor.opacity(0.25), lineWidth: lineWidth)
-            RingArc(start: 0, end: CGFloat(min(max(usage / 100, 0), 1)), color: accentColor, lineWidth: lineWidth)
-            VStack(spacing: 4) {
+                .stroke(accentColor.opacity(0.18), style: StrokeStyle(lineWidth: lineWidth, lineCap: .round))
+            if fraction > 0 {
+                RingArc(start: 0, end: fraction, color: accentColor, lineWidth: lineWidth)
+            }
+            VStack(spacing: 2) {
                 Text(StatsFormatting.percentage(usage))
-                    .font(.system(size: 26, weight: .bold, design: .rounded))
-                Text(String(localized: "stats_resource_active", defaultValue: "Active"))
+                    .font(.system(size: 28, weight: .bold, design: .rounded))
+                    .foregroundStyle(.primary)
+                Text(String(localized: "Active"))
                     .font(.footnote)
-                    .foregroundColor(.secondary)
+                    .foregroundStyle(.secondary)
             }
         }
         .frame(width: diameter, height: diameter)
     }
 }
 
-private struct EngineGaugeView: View {
-    let title: String
-    let value: Double?
-    let tint: Color
-    var size: CGFloat = 68
+private struct GPUPeakLineChart: View {
+    let values: [Double]
+    let sampleInterval: Double
+    let accentColor: Color
 
     var body: some View {
-        if let value {
-            CircularGaugeView(
-                title: title,
-                value: min(max(value / 100, 0), 1),
-                tint: tint,
-                centerPrimaryText: StatsFormatting.percentage(value),
-                centerSecondaryText: nil,
-                subtitle: nil,
-                size: size,
-                lineWidth: 7,
-                backgroundTint: tint.opacity(0.18)
-            )
-        } else {
-            placeholder
+        VStack(alignment: .leading, spacing: 6) {
+            HStack {
+                Text(windowTitle)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                Spacer()
+                Text("\(String(localized: "Peak")) \(StatsFormatting.percentage(peakValue))")
+                    .font(.caption.weight(.semibold))
+                    .foregroundStyle(accentColor)
+            }
+            chart
+                .frame(height: 72)
         }
     }
 
-    private var placeholder: some View {
-        VStack(spacing: 8) {
+    private var windowTitle: String {
+        let samples = max(values.count, 1)
+        let seconds = max(1, Int((Double(samples) * sampleInterval).rounded()))
+        return String(format: String(localized: "Last %d seconds"), seconds)
+    }
+
+    private var peakValue: Double {
+        values.max() ?? 0
+    }
+
+    private var peakIndex: Int {
+        guard let peak = values.max(), let index = values.lastIndex(of: peak) else { return 0 }
+        return index
+    }
+
+    private var chart: some View {
+        GeometryReader { geometry in
+            let width = geometry.size.width
+            let height = geometry.size.height
+            let inset: CGFloat = 6
+            let plotWidth = max(width - inset * 2, 1)
+            let count = values.count
+            let scale = max(peakValue, 1)
+            let peakX = xPosition(index: peakIndex, count: count, plotWidth: plotWidth, inset: inset)
+            let peakY = yPosition(value: values.indices.contains(peakIndex) ? values[peakIndex] : 0, height: height, scale: scale)
+
             ZStack {
+                linePath(width: plotWidth, height: height, inset: inset, scale: scale)
+                    .stroke(accentColor, style: StrokeStyle(lineWidth: 1.5, lineCap: .round, lineJoin: .round))
+
+                Path { path in
+                    path.move(to: CGPoint(x: peakX, y: 0))
+                    path.addLine(to: CGPoint(x: peakX, y: height))
+                }
+                .stroke(accentColor.opacity(0.85), style: StrokeStyle(lineWidth: 1, dash: [3, 3]))
+
                 Circle()
-                    .stroke(Color.primary.opacity(0.08), lineWidth: 7)
-                    .frame(width: size, height: size)
-                Text("—")
-                    .font(.system(size: 18, weight: .semibold))
-                    .foregroundColor(.secondary)
+                    .stroke(accentColor, lineWidth: 1.5)
+                    .frame(width: 8, height: 8)
+                    .position(x: peakX, y: peakY)
             }
+        }
+    }
+
+    private func linePath(width: CGFloat, height: CGFloat, inset: CGFloat, scale: Double) -> Path {
+        var path = Path()
+        guard !values.isEmpty else { return path }
+        for (index, value) in values.enumerated() {
+            let point = CGPoint(
+                x: xPosition(index: index, count: values.count, plotWidth: width, inset: inset),
+                y: yPosition(value: value, height: height, scale: scale)
+            )
+            if index == 0 {
+                path.move(to: point)
+            } else {
+                path.addLine(to: point)
+            }
+        }
+        return path
+    }
+
+    private func xPosition(index: Int, count: Int, plotWidth: CGFloat, inset: CGFloat) -> CGFloat {
+        guard count > 1 else { return inset + plotWidth / 2 }
+        return inset + CGFloat(index) / CGFloat(count - 1) * plotWidth
+    }
+
+    private func yPosition(value: Double, height: CGFloat, scale: Double) -> CGFloat {
+        let normalized = min(max(value / scale, 0), 1)
+        let y = height * (1 - CGFloat(normalized))
+        return min(max(y, 4), height - 4)
+    }
+}
+
+private struct GPUProcessSection: View {
+    let processes: [ProcessStats]
+    let accentColor: Color
+
+    private let memoryColumnWidth: CGFloat = 76
+    private let percentColumnWidth: CGFloat = 64
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack(spacing: 8) {
+                Text(String(localized: "Top Processes"))
+                    .lineLimit(1)
+                Spacer(minLength: 8)
+                Text(String(localized: "Usage"))
+                    .lineLimit(1)
+            }
+            .font(.caption)
+            .foregroundStyle(.secondary)
+
+            if processes.isEmpty {
+                Text("No process data yet. Keep stats open for a moment.")
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            } else {
+                VStack(spacing: 10) {
+                    ForEach(processes) { process in
+                        GPUProcessRow(
+                            process: process,
+                            accentColor: accentColor,
+                            memoryColumnWidth: memoryColumnWidth,
+                            percentColumnWidth: percentColumnWidth
+                        )
+                    }
+                }
+            }
+        }
+    }
+}
+
+private struct GPUProcessRow: View {
+    let process: ProcessStats
+    let accentColor: Color
+    let memoryColumnWidth: CGFloat
+    let percentColumnWidth: CGFloat
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            HStack(spacing: 8) {
+                Text(process.name)
+                    .font(.system(size: 12, weight: .medium))
+                    .foregroundStyle(.primary)
+                    .lineLimit(1)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                Text(process.memoryUsageString)
+                    .font(.system(size: 12, weight: .regular, design: .monospaced))
+                    .foregroundStyle(.secondary)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.8)
+                    .frame(width: memoryColumnWidth, alignment: .trailing)
+                Text(process.cpuUsageString)
+                    .font(.system(size: 12, weight: .semibold, design: .monospaced))
+                    .foregroundStyle(accentColor)
+                    .lineLimit(1)
+                    .frame(width: percentColumnWidth, alignment: .trailing)
+            }
+            progressBar
+        }
+    }
+
+    private var progress: CGFloat {
+        CGFloat(min(max(process.cpuUsage / 100, 0), 1))
+    }
+
+    private var progressBar: some View {
+        GeometryReader { proxy in
+            ZStack(alignment: .leading) {
+                Capsule()
+                    .fill(accentColor.opacity(0.16))
+                Capsule()
+                    .fill(accentColor)
+                    .frame(width: max(progress * proxy.size.width, progress > 0 ? 3 : 0))
+            }
+        }
+        .frame(height: 3)
+    }
+}
+
+private struct GPUSummaryCard: View {
+    let title: String
+    let value: String
+    let accentColor: Color
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
             Text(title)
                 .font(.caption)
-                .foregroundColor(.secondary)
+                .foregroundStyle(.secondary)
+                .lineLimit(1)
+            Text(value)
+                .font(.system(size: 18, weight: .semibold, design: .rounded))
+                .foregroundStyle(accentColor)
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
         }
+        .padding(.horizontal, 12)
+        .padding(.vertical, 10)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(
+            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                .fill(accentColor.opacity(0.08))
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                .stroke(accentColor.opacity(0.35), lineWidth: 1)
+        )
     }
 }
 
@@ -267,31 +420,31 @@ private struct GPUDeviceRow: View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(spacing: 12) {
                 Circle()
-                    .fill(device.isActive ? Color.green.opacity(0.85) : Color.red.opacity(0.7))
+                    .fill(device.isActive ? accentColor : Color.secondary.opacity(0.45))
                     .frame(width: 8, height: 8)
                 VStack(alignment: .leading, spacing: 2) {
                     Text(device.formattedVendorModel)
                         .font(.system(size: 13, weight: .semibold))
-                    Text(device.isActive ? String(localized: "stats_resource_active", defaultValue: "Active") : String(localized: "Idle"))
+                    Text(device.isActive ? String(localized: "Active") : String(localized: "Idle"))
                         .font(.caption2)
-                        .foregroundColor(device.isActive ? .green : .secondary)
+                        .foregroundStyle(device.isActive ? accentColor : .secondary)
                 }
                 Spacer()
                 VStack(alignment: .trailing, spacing: 2) {
                     Text(device.utilizationText)
                         .font(.system(size: 14, weight: .semibold, design: .monospaced))
-                        .foregroundColor(accentColor)
+                        .foregroundStyle(accentColor)
                     Text("Utilization")
                         .font(.caption2)
-                        .foregroundColor(.secondary)
+                        .foregroundStyle(.secondary)
                 }
             }
             VStack(spacing: 8) {
                 if let render = device.renderUtilization {
-                    DetailRow(color: accentColor.opacity(0.9), label: String(localized: "Renderer"), value: StatsFormatting.percentage(render))
+                    DetailRow(color: accentColor, label: String(localized: "Renderer"), value: StatsFormatting.percentage(render))
                 }
                 if let tiler = device.tilerUtilization {
-                    DetailRow(color: accentColor.opacity(0.6), label: String(localized: "Tiler"), value: StatsFormatting.percentage(tiler))
+                    DetailRow(color: accentColor, label: String(localized: "Tiler"), value: StatsFormatting.percentage(tiler))
                 }
                 if let temp = device.temperature {
                     DetailRow(color: nil, label: String(localized: "Temperature"), value: String(format: "%.0f°C", temp))

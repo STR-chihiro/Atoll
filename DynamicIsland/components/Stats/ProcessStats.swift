@@ -41,6 +41,11 @@ struct ProcessStats: Identifiable, Hashable {
     }
 }
 
+enum StatsPalette {
+    /// Cool purple shared by the GPU mini card and its detail popover.
+    static let coolPurple = Color(red: 124.0 / 255.0, green: 108.0 / 255.0, blue: 246.0 / 255.0)
+}
+
 enum ProcessRankingType {
     case cpu
     case memory
@@ -72,7 +77,7 @@ enum ProcessRankingType {
         switch self {
         case .cpu: return .blue
         case .memory: return .green
-        case .gpu: return .purple
+        case .gpu: return StatsPalette.coolPurple
         case .network: return .orange
         case .disk: return .cyan
         }
