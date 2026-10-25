@@ -44,6 +44,8 @@ struct ProcessStats: Identifiable, Hashable {
 enum StatsPalette {
     /// Cool purple shared by the GPU mini card and its detail popover.
     static let coolPurple = Color(red: 124.0 / 255.0, green: 108.0 / 255.0, blue: 246.0 / 255.0)
+    /// Temperature summary card. The only non-metric accent in the stats popovers.
+    static let temperatureOrange = Color(red: 0.98, green: 0.53, blue: 0.18)
 }
 
 enum ProcessRankingType {

@@ -30,14 +30,20 @@ struct RankedProcessPopover: View {
     
     private var configuration: (width: CGFloat, minHeight: CGFloat, padding: CGFloat) {
         switch rankingType {
-        case .cpu:
-            return (420, 420, 0)
-        case .memory:
-            return (400, 380, 0)
-        case .gpu:
+        case .cpu, .memory, .gpu:
             return (420, 360, 0)
         case .network, .disk:
             return (360, 320, 0)
+        }
+    }
+
+    /// CPU, Memory, and GPU draw the close button in the shared header.
+    private var pinsCloseButton: Bool {
+        switch rankingType {
+        case .cpu, .memory, .gpu:
+            return false
+        case .network, .disk:
+            return true
         }
     }
     
@@ -50,16 +56,18 @@ struct RankedProcessPopover: View {
             .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
             .shadow(color: .black.opacity(0.28), radius: 12, x: 0, y: 8)
             .overlay(alignment: .topTrailing) {
-                Button(action: { dismiss() }) {
-                    Image(systemName: "xmark.circle.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 32, height: 32)
-                        .foregroundStyle(.secondary)
+                if pinsCloseButton {
+                    Button(action: { dismiss() }) {
+                        Image(systemName: "xmark.circle.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 32, height: 32)
+                            .foregroundStyle(.secondary)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    .padding(8)
+                    .accessibilityLabel(String(localized: "Close"))
                 }
-                .buttonStyle(PlainButtonStyle())
-                .padding(8)
-                .accessibilityLabel(String(localized: "Close"))
             }
             .overlay(alignment: .center) {
                 PopoverHoverSensor { hovering in
