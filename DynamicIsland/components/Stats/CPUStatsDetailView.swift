@@ -16,50 +16,127 @@
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
+import Defaults
 import SwiftUI
 
 struct CPUStatsDetailView: View {
     @ObservedObject private var statsManager = StatsManager.shared
-    @State private var topProcesses: [ProcessStats] = []
-    
-    private let systemColor = Color(red: 0.94, green: 0.32, blue: 0.28)
-    private let userColor = Color(red: 0.27, green: 0.52, blue: 0.97)
-    private let idleColor = Color.gray.opacity(0.28)
-    
-    var body: some View {
-        ScrollView {
-            VStack(spacing: 16) {
-                StatsCard(title: String(localized: "CPU Overview")) {
-                    CPUUsageDashboard(
-                        breakdown: statsManager.cpuBreakdown,
-                        loadAverage: statsManager.cpuLoadAverage,
-                        uptime: statsManager.cpuUptime,
-                        coreCount: statsManager.cpuCoreUsage.count,
-                        systemColor: systemColor,
-                        userColor: userColor,
-                        idleColor: idleColor,
-                        temperature: statsManager.cpuTemperature,
-                        frequency: statsManager.cpuFrequency
-                    )
-                }
+    @Default(.statsUpdateInterval) private var statsUpdateInterval
+    @Default(.cpuTemperatureUnit) private var temperatureUnit
 
-                StatsCard(title: String(localized: "Top Processes")) {
-                    CPUProcessList(processes: topProcesses, accentColor: userColor)
-                }
-                
-                if !statsManager.cpuCoreUsage.isEmpty {
-                    StatsCard(title: String(localized: "Per-Core Usage")) {
-                        CPUCoreUsageGrid(cores: statsManager.cpuCoreUsage, accentColor: userColor)
-                    }
-                }
-            }
-            .padding(16)
+    private let accent = Color.blue
+    private let processDisplayLimit = 8
+
+    private var topProcesses: [ProcessStats] {
+        Array(statsManager.topCPUProcesses.prefix(processDisplayLimit))
+    }
+
+    var body: some View {
+        let breakdown = statsManager.cpuBreakdown
+        StatsPopoverScaffold(
+            title: String(localized: "CPU Overview"),
+            subtitle: StatsPopoverCopy.subtitle(
+                device: StatsPopoverCopy.chipName,
+                metric: String(localized: "Overall Utilization")
+            ),
+            accent: accent,
+            ringFraction: breakdown.activeUsage / 100,
+            ringValue: StatsFormatting.percentage(breakdown.activeUsage),
+            ringCaption: String(localized: "stats_resource_active", defaultValue: "Active"),
+            heroLine: heroLine(breakdown),
+            history: statsManager.cpuHistory,
+            sampleInterval: statsUpdateInterval,
+            detailRows: detailRows,
+            processes: topProcesses,
+            summaryItems: summaryItems,
+            footer: { EmptyView() }
+        )
+    }
+
+    private func heroLine(_ breakdown: CPULoadBreakdown) -> String {
+        let system = "\(String(localized: "System")) \(StatsFormatting.percentage(breakdown.system))"
+        let user = "\(String(localized: "User")) \(StatsFormatting.percentage(breakdown.user))"
+        let idle = "\(String(localized: "Idle")) \(StatsFormatting.percentage(breakdown.idle))"
+        return "\(system)  \(user)  \(idle)"
+    }
+
+    private var detailRows: [StatsPopoverDetailRowModel] {
+        [
+            StatsPopoverDetailRowModel(
+                label: String(localized: "Logical cores"),
+                value: "\(logicalCoreCount)"
+            ),
+            StatsPopoverDetailRowModel(
+                label: String(localized: "Uptime"),
+                value: StatsFormatting.abbreviatedDuration(statsManager.cpuUptime)
+            ),
+            StatsPopoverDetailRowModel(
+                label: frequencyLabel,
+                value: frequencyDetail
+            ),
+            StatsPopoverDetailRowModel(
+                label: String(localized: "Load (1 / 5 / 15 min)"),
+                value: loadDetail
+            )
+        ]
+    }
+
+    private var logicalCoreCount: Int {
+        let sampled = statsManager.cpuCoreUsage.count
+        if sampled > 0 { return sampled }
+        return max(AppleHardwareInfo.shared.logicalCoreCount, 1)
+    }
+
+    private var frequencyLabel: String {
+        let frequency = statsManager.cpuFrequency
+        if frequency?.eCoreGHz != nil, frequency?.pCoreGHz != nil {
+            return String(localized: "Frequency (E / P)")
         }
-        .onReceive(statsManager.$topCPUProcesses) { processes in
-            topProcesses = Array(processes.prefix(8))
+        return String(localized: "Frequency")
+    }
+
+    private var frequencyDetail: String {
+        guard let frequency = statsManager.cpuFrequency else { return "—" }
+        if let eCore = frequency.eCoreGHz, let pCore = frequency.pCoreGHz {
+            return String(format: "%.1f / %.1f GHz", eCore, pCore)
         }
-        .onAppear {
-            topProcesses = Array(statsManager.topCPUProcesses.prefix(8))
+        if let eCore = frequency.eCoreGHz {
+            return String(format: "E %.1f GHz", eCore)
         }
+        if let pCore = frequency.pCoreGHz {
+            return String(format: "P %.1f GHz", pCore)
+        }
+        return String(format: "%.1f GHz", frequency.overallGHz)
+    }
+
+    private var loadDetail: String {
+        let load = statsManager.cpuLoadAverage
+        return String(format: "%.2f · %.2f · %.2f", load.oneMinute, load.fiveMinutes, load.fifteenMinutes)
+    }
+
+    private var summaryItems: [StatsPopoverSummaryItem] {
+        [
+            StatsPopoverSummaryItem(
+                title: String(localized: "Temperature"),
+                value: temperatureText,
+                accent: StatsPalette.temperatureOrange
+            ),
+            StatsPopoverSummaryItem(
+                title: String(localized: "Frequency"),
+                value: frequencyCardText,
+                accent: accent
+            )
+        ]
+    }
+
+    private var temperatureText: String {
+        guard let celsius = statsManager.cpuTemperature.celsius else { return "—" }
+        let display = temperatureUnit == .celsius ? celsius : celsius * 9.0 / 5.0 + 32.0
+        return String(format: "%.0f%@", display, temperatureUnit.symbol)
+    }
+
+    private var frequencyCardText: String {
+        guard let frequency = statsManager.cpuFrequency else { return "—" }
+        return String(format: "%.1f GHz", frequency.overallGHz)
     }
 }

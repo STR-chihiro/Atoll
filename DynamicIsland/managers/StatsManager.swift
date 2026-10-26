@@ -813,7 +813,9 @@ class StatsManager: ObservableObject {
         previousTimestamp = currentTime
         networkInterfaces = collectNetworkInterfaces(deltaTime: timeInterval)
         diskDevices = collectDiskDevices()
-        refreshProcessStatsIfNeeded(force: true)
+        // Process list is sampled on its own cadence. Forcing it on every stats
+        // tick relaunches `ps` and AppKit icon lookups often enough to hitch.
+        refreshProcessStatsIfNeeded()
     }
     
     private func updateHistory(value: Double, history: inout [Double]) {
@@ -1452,21 +1454,16 @@ class StatsManager: ObservableObject {
     // MARK: - Process Monitoring Methods
     @MainActor
     func getProcessesRankedByCPU() -> [ProcessStats] {
-        refreshProcessStatsIfNeeded()
-        return cachedProcessStats.sorted { $0.cpuUsage > $1.cpuUsage }
+        cachedProcessStats.sorted { $0.cpuUsage > $1.cpuUsage }
     }
     
-    @MainActor
     func getProcessesRankedByMemory() -> [ProcessStats] {
-        refreshProcessStatsIfNeeded()
-        return cachedProcessStats.sorted { $0.memoryUsage > $1.memoryUsage }
+        cachedProcessStats.sorted { $0.memoryUsage > $1.memoryUsage }
     }
     
-    @MainActor
     func getProcessesRankedByGPU() -> [ProcessStats] {
-        // For now, rank by CPU usage as GPU per-process stats are complex to obtain
-        refreshProcessStatsIfNeeded()
-        return cachedProcessStats.sorted { $0.cpuUsage > $1.cpuUsage }
+        // Per-process GPU time isn't available; CPU share is the stand-in.
+        cachedProcessStats.sorted { $0.cpuUsage > $1.cpuUsage }
     }
     
     @MainActor
@@ -1479,17 +1476,19 @@ class StatsManager: ObservableObject {
 
         Task.detached { [weak self] in
             guard let self else { return }
-            let processes = StatsManager.collectTopProcesses(limit: self.maxProcessEntries)
+            let samples = StatsManager.sampleProcesses(limit: self.maxProcessEntries)
             await MainActor.run {
-                self.cachedProcessStats = processes
+                self.cachedProcessStats = StatsManager.makeProcessStats(from: samples)
                 self.lastProcessStatsUpdate = Date()
                 self.isProcessRefreshInFlight = false
-                self.topCPUProcesses = processes
+                self.topCPUProcesses = self.cachedProcessStats
             }
         }
     }
 
-    private static func collectTopProcesses(limit: Int) -> [ProcessStats] {
+    /// `ps` and `proc_pidinfo` are safe off the main thread. AppKit name/icon
+    /// lookup is applied later on the main actor.
+    private static func sampleProcesses(limit: Int) -> [ProcessSample] {
         guard limit > 0 else { return [] }
 
         let task = Process()
@@ -1520,7 +1519,7 @@ class StatsManager: ObservableObject {
             return []
         }
 
-        var results: [ProcessStats] = []
+        var results: [ProcessSample] = []
 
         let lines = output.split(separator: "\n", omittingEmptySubsequences: true)
         guard lines.count > 1 else { return [] }
@@ -1528,22 +1527,37 @@ class StatsManager: ObservableObject {
         for line in lines.dropFirst() {
             guard let parsed = parseProcessLine(String(line)) else { continue }
             let (pid, cpuUsage, command) = parsed
-            let (displayName, icon) = runningApplicationInfo(for: pid, fallbackCommand: command)
-            let memoryUsage = residentMemory(for: pid)
-
-            let process = ProcessStats(
+            results.append(ProcessSample(
                 pid: pid,
-                name: displayName,
                 cpuUsage: cpuUsage,
-                memoryUsage: memoryUsage,
-                icon: icon
-            )
-
-            results.append(process)
+                command: command,
+                memoryUsage: residentMemory(for: pid)
+            ))
             if results.count >= limit { break }
         }
 
         return results
+    }
+
+    @MainActor
+    private static func makeProcessStats(from samples: [ProcessSample]) -> [ProcessStats] {
+        samples.map { sample in
+            let (displayName, icon) = runningApplicationInfo(for: sample.pid, fallbackCommand: sample.command)
+            return ProcessStats(
+                pid: sample.pid,
+                name: displayName,
+                cpuUsage: sample.cpuUsage,
+                memoryUsage: sample.memoryUsage,
+                icon: icon
+            )
+        }
+    }
+
+    private struct ProcessSample {
+        let pid: pid_t
+        let cpuUsage: Double
+        let command: String
+        let memoryUsage: UInt64
     }
 
     private static func parseProcessLine(_ rawLine: String) -> (pid_t, Double, String)? {
