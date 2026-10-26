@@ -23,10 +23,13 @@ struct CPUStatsDetailView: View {
     @ObservedObject private var statsManager = StatsManager.shared
     @Default(.statsUpdateInterval) private var statsUpdateInterval
     @Default(.cpuTemperatureUnit) private var temperatureUnit
-    @State private var topProcesses: [ProcessStats] = []
 
     private let accent = Color.blue
     private let processDisplayLimit = 8
+
+    private var topProcesses: [ProcessStats] {
+        Array(statsManager.topCPUProcesses.prefix(processDisplayLimit))
+    }
 
     var body: some View {
         let breakdown = statsManager.cpuBreakdown
@@ -48,12 +51,6 @@ struct CPUStatsDetailView: View {
             summaryItems: summaryItems,
             footer: { EmptyView() }
         )
-        .onReceive(statsManager.$topCPUProcesses) { processes in
-            topProcesses = Array(processes.prefix(processDisplayLimit))
-        }
-        .onAppear {
-            topProcesses = Array(statsManager.topCPUProcesses.prefix(processDisplayLimit))
-        }
     }
 
     private func heroLine(_ breakdown: CPULoadBreakdown) -> String {

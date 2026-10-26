@@ -22,10 +22,13 @@ import SwiftUI
 struct MemoryStatsDetailView: View {
     @ObservedObject private var statsManager = StatsManager.shared
     @Default(.statsUpdateInterval) private var statsUpdateInterval
-    @State private var topProcesses: [ProcessStats] = []
 
     private let accent = Color.green
     private let processDisplayLimit = 8
+
+    private var topProcesses: [ProcessStats] {
+        Array(statsManager.getProcessesRankedByMemory().prefix(processDisplayLimit))
+    }
 
     var body: some View {
         let breakdown = statsManager.memoryBreakdown
@@ -47,14 +50,6 @@ struct MemoryStatsDetailView: View {
             summaryItems: summaryItems(breakdown),
             footer: { EmptyView() }
         )
-        .onAppear(perform: refreshProcesses)
-        .onReceive(statsManager.$lastUpdated) { _ in
-            refreshProcesses()
-        }
-    }
-
-    private func refreshProcesses() {
-        topProcesses = Array(statsManager.getProcessesRankedByMemory().prefix(processDisplayLimit))
     }
 
     private func heroLine(_ breakdown: MemoryBreakdown) -> String {

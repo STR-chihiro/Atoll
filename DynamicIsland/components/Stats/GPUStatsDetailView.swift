@@ -22,11 +22,14 @@ import SwiftUI
 struct GPUStatsDetailView: View {
     @ObservedObject private var statsManager = StatsManager.shared
     @Default(.statsUpdateInterval) private var statsUpdateInterval
-    @State private var topProcesses: [ProcessStats] = []
 
     private let accentColor = StatsPalette.coolPurple
     private let cardBackground = Color(nsColor: .windowBackgroundColor).opacity(0.65)
     private let processDisplayLimit = 8
+
+    private var topProcesses: [ProcessStats] {
+        Array(statsManager.getProcessesRankedByGPU().prefix(processDisplayLimit))
+    }
 
     var body: some View {
         StatsPopoverScaffold(
@@ -51,14 +54,6 @@ struct GPUStatsDetailView: View {
                 }
             }
         }
-        .onAppear(perform: refreshProcesses)
-        .onReceive(statsManager.$lastUpdated) { _ in
-            refreshProcesses()
-        }
-    }
-
-    private func refreshProcesses() {
-        topProcesses = Array(statsManager.getProcessesRankedByGPU().prefix(processDisplayLimit))
     }
 
     private var primaryDevice: GPUDeviceMetrics? {
@@ -133,7 +128,7 @@ private struct GPUDeviceRow: View {
                     Text(device.utilizationText)
                         .font(.system(size: 14, weight: .semibold, design: .monospaced))
                         .foregroundStyle(accentColor)
-                    Text("Utilization")
+                    Text(String(localized: "Utilization"))
                         .font(.caption2)
                         .foregroundStyle(.secondary)
                 }

@@ -4569,6 +4569,18 @@
             "state" : "translated",
             "value" : "12시간"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "12 小时"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "12 小時"
+          }
         }
       }
     },
@@ -5030,6 +5042,18 @@
             "state" : "translated",
             "value" : "3시간"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3 小时"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3 小時"
+          }
         }
       }
     },
@@ -5261,6 +5285,12 @@
           }
         },
         "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3D"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "3D"
@@ -5596,6 +5626,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "6시간"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "6 小时"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "6 小時"
           }
         }
       }
@@ -9038,6 +9080,18 @@
             "state" : "translated",
             "value" : "전체 기간"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "所有时间"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "所有時間"
+          }
         }
       }
     },
@@ -10004,6 +10058,12 @@
           }
         },
         "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Amazon Music"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Amazon Music"
@@ -15447,6 +15507,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "앱에서 카메라를 사용 중입니다"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "相机正被某个应用使用"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "相機正被某個 App 使用"
           }
         }
       }
@@ -47371,6 +47443,18 @@
             "state" : "translated",
             "value" : "앱에서 마이크를 사용 중입니다"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "麦克风正被某个应用使用"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "麥克風正被某個 App 使用"
+          }
         }
       }
     },
@@ -60758,6 +60842,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "오늘 남은 시간"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今天余下的时间"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今天餘下的時間"
           }
         }
       }
@@ -85167,6 +85263,6553 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "佔用"
+          }
+        }
+      }
+    },
+    "⚠️  WARNING: System HUD may not be working properly!" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️  WARNUNG: Das System-HUD funktioniert möglicherweise nicht richtig!"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️  VAROITUS: Järjestelmän HUD ei välttämättä toimi oikein!"
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ ચેતવણી: સિસ્ટમ HUD યોગ્ય રીતે કામ કરી રહી નથી!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "⚠️ ВНИМАНИЕ: HUD системы может работать неправильно!",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ 警告：系统 HUD 可能无法正常工作！"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️  คำเตือน: HUD ระบบอาจทำงานไม่ถูกต้อง!"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ WAARSCHUWING: Systeem-HUD werkt mogelijk niet correct!"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ 警告：系統 HUD 可能無法正常工作！"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️  ADVERTENCIA: es posible que el HUD del sistema no funcione correctamente"
+          }
+        }
+      }
+    },
+    "⚠️ Error:" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ Fehler:"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "⚠️ Ошибка:",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ 错误："
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ ข้อผิดพลาด:"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ Fout:"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ 錯誤："
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ Error:"
+          }
+        }
+      }
+    },
+    "🔋 Max capacity" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🔋 Maximale Kapazität"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "🔋 Макс. емкость",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🔋 最大容量"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🔋 ความจุสูงสุด"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🔋 Maximale capaciteit"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🔋 最大容量"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🔋 Capacidad máxima"
+          }
+        }
+      }
+    },
+    "🕒 Time to full charge:" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🕒 Zeit bis zur vollständigen Aufladung:"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "🕒 Время до полной зарядки:",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🕒 充满所需时间："
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🕒 เวลาชาร์จเต็ม:"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🕒 Tijd tot volledig opladen:"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🕒 充滿所需時間："
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🕒 Tiempo para carga completa:"
+          }
+        }
+      }
+    },
+    "Alpha Feature Warning" : {
+      "comment" : "The title of an alert that warns users about an alpha feature.",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alpha-Funktionswarnung"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Alpha Feature Warning"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Advertencia de función alfa"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avertissement concernant la fonctionnalité Alpha"
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Внимание: альфа-функция"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "测试版功能警告"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "คำเตือนฟีเจอร์อัลฟา"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Waarschuwing voor alpha-functie"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "測試版功能警告"
+          }
+        }
+      }
+    },
+    "apperance" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aussehen"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "внешний вид",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "外观"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ลักษณะที่ปรากฏ"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "uiterlijk"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "外觀"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "apariencia"
+          }
+        }
+      }
+    },
+    "Atoll needs access to save and read AI assistant files." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atoll benötigt Zugriff, um AI-Assistent-Dateien zu speichern und zu lesen."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "Atoll нужен доступ для сохранения ИИ-файлов.",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atoll 需要权限来保存和读取 AI 助手文件。"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atoll ต้องการสิทธิ์เพื่อบันทึกและอ่านไฟล์ผู้ช่วย AI"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atoll heeft toegang nodig om AI-assistentbestanden op te slaan en te lezen."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atoll 需要權限來儲存和讀取 AI 助理檔案。"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atoll necesita acceso para guardar y leer archivos del asistente de IA."
+          }
+        }
+      }
+    },
+    "Atoll needs access to save screenshots to your desktop." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atoll benötigt Zugriff, um Screenshots auf Ihrem Desktop zu speichern."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "Atoll нужен доступ для сохранения снимков экрана.",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atoll 需要权限将截图保存到桌面。"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atoll ต้องการสิทธิ์เพื่อบันทึกภาพหน้าจอไปยังเดสก์ท็อป"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atoll heeft toegang nodig om schermafbeeldingen op je bureaublad op te slaan."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atoll 需要權限將截圖儲存到桌面。"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atoll necesita acceso para guardar capturas de pantalla en tu escritorio."
+          }
+        }
+      }
+    },
+    "Atoll needs Bluetooth access to detect when audio devices connect and display their battery status in the HUD." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atoll benötigt Bluetooth-Zugriff, um zu erkennen, wenn Audiogeräte verbunden werden, und deren Akkustatus im HUD anzuzeigen."
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "એટોલને બ્લૂટૂથ ઍક્સેસની જરૂર છે જેથી તે ઓડિયો ઉપકરણો જોડાય ત્યારે તેને શોધી શકે અને HUDમાં તેમની બેટરી સ્થિતિ દર્શાવી શકે."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "Для отображения батареи аудиоустройств нужен доступ к Bluetooth.",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atoll 需要蓝牙访问权限来检测音频设备连接并在 HUD 中显示其电池状态。"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atoll ต้องการสิทธิ์บลูทูธเพื่อตรวจจับเมื่ออุปกรณ์เสียงเชื่อมต่อและแสดงสถานะแบตเตอรี่ใน HUD"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atoll heeft Bluetooth-toegang nodig om te detecteren wanneer audioapparaten verbinding maken en om hun batterijstatus in de HUD weer te geven."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atoll 需要藍牙存取權限來偵測音訊裝置連線並在 HUD 中顯示其電池狀態。"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atoll necesita acceso a Bluetooth para detectar cuándo se conectan dispositivos de audio y mostrar su estado de batería en el HUD."
+          }
+        }
+      }
+    },
+    "Atoll uses AppleScripts to control Spotify and Apple Music" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atoll verwendet AppleScripts zur Steuerung von Spotify und Apple Music."
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "એટોલ Spotify અને Apple Music ને નિયંત્રિત કરવા માટે AppleScripts નો ઉપયોગ કરે છે."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "Atoll использует AppleScript для управления Spotify и Apple Music",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atoll 使用 AppleScript 控制 Spotify 和 Apple Music"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atoll ใช้ AppleScripts เพื่อควบคุม Spotify และ Apple Music"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atoll gebruikt AppleScripts om Spotify en Apple Music te besturen"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atoll 使用 AppleScript 控制 Spotify 和 Apple Music"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atoll usa AppleScripts para controlar Spotify y Apple Music"
+          }
+        }
+      }
+    },
+    "Bottom Pad:" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unteres Pad:"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Bottom Pad:"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Relleno inferior:"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coussin inférieur :"
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отступ снизу:"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "底部间距："
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ช่องว่างด้านล่าง:"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Onderste pad:"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "底部間距："
+          }
+        }
+      }
+    },
+    "close gesture" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schließen-Geste"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "жест закрытия",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关闭手势"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ท่าทางปิด"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "dichtbij gebaar"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "關閉手勢"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "gesto para cerrar"
+          }
+        }
+      }
+    },
+    "Color-Coded Progress Bars" : {
+      "comment" : "A section header that lists the options for color-coded progress bars.",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Farbcodierte Fortschrittsbalken"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Color-Coded Progress Bars"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Barras de progreso con código de colores"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Barres de progression avec code couleur"
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "रंग-कोडित प्रगति बार"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Цветные индикаторы"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "彩色进度条"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แถบความคืบหน้าตามรหัสสี"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kleurgecodeerde voortgangsbalken"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "彩色進度條"
+          }
+        }
+      }
+    },
+    "Container" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Behälter"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "Контейнер",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "容器"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "คอนเทนเนอร์"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Container"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "容器"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contenedor"
+          }
+        }
+      }
+    },
+    "Controls the optional timer widget that floats above the media panel. Blur adds a frosted finish behind the compact view." : {
+      "comment" : "A footer for the \"Timer Widget\" section in the Lock Screen Settings view.",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يتحكم في أداة المؤقت الاختيارية التي تظهر فوق لوحة الوسائط. يضيف Blur لمسة نهائية شفافة خلف العرض المضغوط."
+          }
+        },
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Кіруе дадатковым таймер-віджэтам, які лунае над медыяпанэллю. Затуманьванне дадае матавае пакрыццё за кампактным праглядам."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ovládá volitelný widget časovače, který se vznáší nad panelem médií. Rozostření přidává za kompaktním zobrazením matný povrch."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Steuert das optionale Timer-Widget, das über dem Medienfenster schwebt. Die Unschärfe fügt hinter der kompakten Ansicht ein mattiertes Finish hinzu."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Controls the optional timer widget that floats above the media panel. Blur adds a frosted finish behind the compact view."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Controla el widget del temporizador opcional que flota sobre el panel multimedia. El desenfoque añade un acabado helado detrás de la vista compacta."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ohjaa valinnaista ajastinwidgetiä, joka kelluu mediapaneelin yläpuolella. Blur lisää himmeän pinnan kompaktin näkymän taakse."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contrôle le widget de minuterie optionnel qui flotte au-dessus du panneau multimédia. Le flou ajoute une finition givrée derrière la vue compacte."
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मीडिया पैनल के ऊपर तैरने वाले वैकल्पिक टाइमर विजेट को नियंत्रित करता है। ब्लर कॉम्पैक्ट व्यू के पीछे एक फ्रॉस्टेड फिनिश जोड़ता है।"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A médiapanel felett lebegő opcionális időzítő widgetet vezérli. A Blur homályos háttérrel egészíti ki a kompakt nézetet."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "미디어 패널 위에 떠 있는 선택적 타이머 위젯을 제어합니다. 흐림 효과는 컴팩트 뷰 뒤에 서리 낀 마감을 추가합니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kontrollerer den valgfrie timer-widgeten som flyter over mediepanelet. Blur legger til en frostet finish bak kompaktvisningen."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Управляет дополнительным виджетом таймера над медиапанелью. Размытие добавляет матовый эффект."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Styr den valfria timerwidgeten som flyter ovanför mediepanelen. Blur lägger till en frostad yta bakom kompaktvyn."
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "மீடியா பேனலுக்கு மேலே மிதக்கும் விருப்பத்தேர்வு டைமர் விட்ஜெட்டைக் கட்டுப்படுத்துகிறது. மங்கல், சுருங்கிய காட்சிக்குப் பின்னால் ஒரு பனிமூட்டமான தோற்றத்தைச் சேர்க்கிறது."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Medya panelinin üzerinde yüzen isteğe bağlı zamanlayıcı widget'ını kontrol eder. Bulanıklık, kompakt görünümün arkasına buzlu bir yüzey ekler."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "控制浮动在媒体面板上方的可选计时器小组件。模糊效果为紧凑视图添加磨砂效果。"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ควบคุมวิดเจ็ตตัวจับเวลาที่ลอยเหนือแผงสื่อ เบลอเพิ่มผิวฟรอสต์หลังมุมมองแบบกระชับ"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bestuurt de optionele timerwidget die boven het mediapaneel zweeft. Vervaging voegt een matte afwerking toe achter de compacte weergave."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "控制浮動在媒體面板上方的可選計時器小工具。模糊效果為緊湊檢視新增磨砂效果。"
+          }
+        }
+      }
+    },
+    "Custom OSD is an experimental alpha feature and may contain bugs or unexpected behavior.\n\nThis feature requires macOS 15 or later and is still under active development. It's recommended to keep it disabled unless you want to help test it." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OSD المخصص هو ميزة تجريبية في مرحلة ألفا وقد تحتوي على أخطاء أو سلوك غير متوقع.\n\nتتطلب هذه الميزة نظام macOS 15 أو أحدث وهي لا تزال قيد التطوير. يوصى بإبقائها معطلة ما لم تكن ترغب في المساعدة في اختبارها."
+          }
+        },
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Наладжвальны OSD — гэта эксперыментальная альфа-функцыя, якая можа ўтрымліваць памылкі або дэманстраваць нечаканае паводзіны.\n\nГэтая функцыя патрабуе macOS 15 або больш позняй версіі і ўсё яшчэ знаходзіцца ў актыўнай распрацоўцы. Рэкамендуецца пакінуць яе адключанай, калі вы не хочаце дапамагчы з тэсціраваннем."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vlastní OSD je experimentální funkce v alfa verzi a může obsahovat chyby nebo neočekávané chování.\n\nTato funkce vyžaduje macOS 15 nebo novější a je stále ve vývoji. Doporučujeme ji ponechat vypnutou, pokud nechcete pomáhat s jejím testováním."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Benutzerdefinierte OSD ist eine experimentelle Alpha-Funktion und kann Fehler oder unerwartetes Verhalten enthalten. Diese Funktion erfordert macOS 15 oder höher und befindet sich noch in der aktiven Entwicklung. Es wird empfohlen, es deaktiviert zu lassen, es sei denn, Sie möchten beim Testen helfen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Custom OSD is an experimental alpha feature and may contain bugs or unexpected behavior.\n\nThis feature requires macOS 15 or later and is still under active development. It's recommended to keep it disabled unless you want to help test it."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El OSD personalizado es una característica alfa experimental y puede contener errores o comportamientos inesperados. Esta función requiere macOS 15 o posterior y todavía está en desarrollo activo. Se recomienda mantenerlo desactivado a menos que quieras ayudar a probarlo."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mukautettu OSD on kokeellinen alfa-ominaisuus, joka saattaa sisältää virheitä tai toimia odottamattomasti.\n\nTämä ominaisuus vaatii macOS 15:n tai uudemman version ja on vielä aktiivisen kehityksen alla. On suositeltavaa pitää se pois käytöstä, ellet halua auttaa sen testaamisessa."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L'OSD personnalisé est une fonctionnalité alpha expérimentale et peut contenir des bogues ou un comportement inattendu. Cette fonctionnalité nécessite macOS 15 ou une version ultérieure et est toujours en cours de développement actif. Il est recommandé de le garder désactivé à moins que vous ne vouliez aider à le tester."
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "कस्टम OSD एक प्रयोगात्मक अल्फा फ़ीचर है और इसमें बग या अप्रत्याशित व्यवहार हो सकते हैं।\n\nइस फ़ीचर के लिए macOS 15 या बाद के संस्करण की आवश्यकता है और यह अभी भी सक्रिय विकास के अधीन है। जब तक आप इसका परीक्षण करने में मदद नहीं करना चाहते, तब तक इसे अक्षम रखना अनुशंसित है।"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Az egyéni OSD egy kísérleti alfa funkció, amely hibákat vagy váratlan viselkedést tartalmazhat.\n\nEz a funkció macOS 15 vagy újabb verziót igényel, és még aktív fejlesztés alatt áll. Javasoljuk, hogy hagyja kikapcsolva, hacsak nem szeretne segíteni a tesztelésében."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사용자 지정 OSD는 실험적인 알파 기능으로 버그나 예상치 못한 동작이 발생할 수 있습니다.\n\n이 기능은 macOS 15 이상이 필요하며 아직 개발 중입니다. 테스트에 참여하지 않는 한 비활성화 상태로 유지하는 것이 좋습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilpasset OSD er en eksperimentell alfa-funksjon og kan inneholde feil eller uventet oppførsel.\n\nDenne funksjonen krever macOS 15 eller nyere og er fortsatt under aktiv utvikling. Det anbefales å holde den deaktivert med mindre du ønsker å hjelpe til med å teste den."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Custom OSD — экспериментальная функция, возможны ошибки.\n\nТребуется macOS 15 или новее. Рекомендуется не включать, если вы не участвуете в тестировании."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "தனிப்பயன் OSD என்பது ஒரு சோதனை ஆல்ஃபா அம்சமாகும், மேலும் இதில் பிழைகள் அல்லது எதிர்பாராத நடத்தைகள் இருக்கலாம்.\n\nஇந்த அம்சத்திற்கு macOS 15 அல்லது அதற்குப் பிந்தைய பதிப்பு தேவைப்படுகிறது, மேலும் இது இன்னும் தீவிர மேம்பாட்டில் உள்ளது. இதைச் சோதிக்க நீங்கள் உதவ விரும்பினால் தவிர, இதை முடக்கியே வைத்திருக்கப் பரிந்துரைக்கப்படுகிறது."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Özel OSD deneysel bir alfa özelliğidir ve hatalar veya beklenmedik davranışlar içerebilir. Bu özellik macOS 15 veya daha yenisini gerektirir ve hala etkin bir geliştirme aşamasındadır. Test etmeye yardımcı olmak istemediğiniz sürece devre dışı bırakmanız önerilir."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自定义 OSD 是一个实验性测试功能，可能包含错误或意外行为。\n\n此功能需要 macOS 15 或更高版本，仍在积极开发中。除非您想帮助测试，否则建议保持禁用。"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Custom OSD เป็นฟีเจอร์อัลฟาทดลองและอาจมีบั๊กหรือพฤติกรรมที่ไม่คาดคิด\n\nฟีเจอร์นี้ต้องการ macOS 15 ขึ้นไปและยังอยู่ระหว่างพัฒนา แนะนำให้ปิดใช้ไว้ เว้นแต่คุณต้องการช่วยทดสอบ"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aangepaste OSD is een experimentele alpha-functie en kan bugs of onverwacht gedrag bevatten.\n\nDeze functie vereist macOS 15 of hoger en wordt nog steeds actief ontwikkeld. Het wordt aanbevolen om dit uitgeschakeld te houden, tenzij je wilt helpen met testen."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自訂 OSD 是一個實驗性測試功能，可能包含錯誤或意外行為。\n\n此功能需要 macOS 15 或更高版本，仍在積極開發中。除非你想幫助測試，否則建議保持停用。"
+          }
+        }
+      }
+    },
+    "Custom OSD is disabled because HUDs are enabled. Disable HUDs in the HUDs tab to use Custom OSD." : {
+      "comment" : "A message displayed below the toggle to inform the user that they cannot enable Custom OSD if HUDs are enabled.",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم تعطيل OSD المخصص لأن HUDs ممكّن. قم بتعطيل HUDs في علامة التبويب HUDs لاستخدام OSD المخصص."
+          }
+        },
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Наладжвальны OSD адключаны, таму што ўключаны HUD-ы. Адключыце HUD-ы на ўкладцы «HUD-ы», каб выкарыстоўваць наладжвальны OSD."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vlastní OSD je zakázáno, protože jsou povoleny HUD. Chcete-li použít vlastní OSD, zakážte HUD na kartě HUD."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Benutzerdefiniertes OSD ist deaktiviert, da HUDs aktiviert sind. Deaktivieren Sie HUDs auf der Registerkarte HUDs, um benutzerdefiniertes OSD zu verwenden."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Custom OSD is disabled because HUDs are enabled. Disable HUDs in the HUDs tab to use Custom OSD."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El OSD personalizado está deshabilitado porque los HUD están habilitados. Deshable HUDs en la pestaña HUDs para usar OSD personalizado."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mukautettu OSD on pois käytöstä, koska HUD-näytöt ovat käytössä. Poista HUD-näytöt käytöstä HUD-välilehdessä, jotta voit käyttää mukautettua OSD-näyttöä."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L'OSD personnalisé est désactivé car les HUD sont activés. Désactiver les HUD dans l'onglet HUDs pour utiliser l'OSD personnalisé."
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "कस्टम OSD अक्षम है क्योंकि HUD सक्षम हैं। कस्टम OSD का उपयोग करने के लिए HUD टैब में HUD को अक्षम करें।"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Az egyéni OSD le van tiltva, mert a HUD-ok engedélyezve vannak. A HUD-ok lapon tiltsa le a HUD-okat, hogy használhassa az egyéni OSD-t."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HUD가 활성화되어 있어 사용자 지정 OSD가 비활성화되었습니다. 사용자 지정 OSD를 사용하려면 HUD 탭에서 HUD를 비활성화하십시오."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilpasset OSD er deaktivert fordi HUD-er er aktivert. Deaktiver HUD-er i HUD-fanen for å bruke tilpasset OSD."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Собственный OSD отключен, так как включены системные HUD. Отключите HUD в настройках, чтобы использовать эту функцию."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HUD-கள் இயக்கப்பட்டிருப்பதால், தனிப்பயன் OSD முடக்கப்பட்டுள்ளது. தனிப்பயன் OSD-ஐப் பயன்படுத்த, HUD-கள் தாவலில் HUD-களை முடக்கவும்."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HUD'ler etkinleştirildiği için Özel OSD devre dışı bırakıldı. Özel OSD'yi kullanmak için HUD'ler sekmesindeki HUD'leri devre dışı bırakın."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自定义 OSD 已禁用，因为 HUD 已启用。请在 HUD 标签页中禁用 HUD 以使用自定义 OSD。"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Custom OSD ถูกปิดเนื่องจาก HUD เปิดอยู่ ปิด HUD ในแท็บ HUD เพื่อใช้ Custom OSD"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aangepaste OSD is uitgeschakeld omdat HUD's zijn ingeschakeld. Schakel HUD's uit op het tabblad HUD's om Aangepaste OSD te gebruiken."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自訂 OSD 已停用，因為 HUD 已啟用。請在 HUD 分頁中停用 HUD 以使用自訂 OSD。"
+          }
+        }
+      }
+    },
+    "Detail View" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Detailansicht"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "Детальный просмотр",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "详细视图"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "มุมมองรายละเอียด"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Detailweergave"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "詳細檢視"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vista de detalle"
+          }
+        }
+      }
+    },
+    "Display custom macOS-style OSD windows at the bottom center of the screen when adjusting volume, brightness, or keyboard backlight." : {
+      "comment" : "A description of the functionality of the Custom OSD feature.",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اعرض نوافذ OSD مخصصة على غرار macOS في الجزء السفلي الأوسط من الشاشة عند ضبط مستوى الصوت أو السطوع أو الإضاءة الخلفية للوحة المفاتيح."
+          }
+        },
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Падчас рэгулявання гучнасці, яркасці або падсветкі клавіятуры адлюстроўваць на ніжнім цэнтры экрана карыстальніцкія OSD-вокны ў стылі macOS."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Při nastavování hlasitosti, jasu nebo podsvícení klávesnice zobrazte v dolní střední části obrazovky vlastní okna OSD ve stylu macOS."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeigen Sie benutzerdefinierte OSD-Fenster im macOS-Stil in der unteren Mitte des Bildschirms an, wenn Sie die Lautstärke, Helligkeit oder Tastaturhintergrundbeleuchtung anpassen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Display custom macOS-style OSD windows at the bottom center of the screen when adjusting volume, brightness, or keyboard backlight."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Muestra ventanas OSD personalizadas de estilo macOS en la parte inferior central de la pantalla al ajustar el volumen, el brillo o la retroiluminación del teclado."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Näytä mukautetut macOS-tyyliset OSD-ikkunat näytön alareunassa keskellä, kun säädät äänenvoimakkuutta, kirkkautta tai näppäimistön taustavaloa."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Affichez des fenêtres OSD personnalisées de style macOS en bas au centre de l'écran lors du réglage du volume, de la luminosité ou du rétroéclairage du clavier."
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "वॉल्यूम, ब्राइटनेस या कीबोर्ड बैकलाइट समायोजित करते समय स्क्रीन के निचले केंद्र में कस्टम macOS-शैली की OSD विंडो दिखाएँ।"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A hangerő, a fényerő vagy a billentyűzet háttérvilágításának beállításakor a képernyő alsó közepén egyedi, macOS stílusú OSD ablakok jelennek meg."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vis tilpassede OSD-vinduer i macOS-stil nederst i midten av skjermen når du justerer volum, lysstyrke eller bakgrunnsbelysning på tastaturet."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отображать собственные OSD-окна в стиле macOS внизу экрана при изменении громкости, яркости или подсветки клавиатуры."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ஒலி, பிரகாசம் அல்லது விசைப்பலகை பின்னொளியைச் சரிசெய்யும்போது, திரையின் கீழ்ப்பகுதி மையத்தில் தனிப்பயன் macOS பாணி OSD சாளரங்களைக் காட்டவும்."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ses düzeyini, parlaklığı veya klavye arka aydınlatmasını ayarlarken ekranın alt ortasında özel macOS tarzı OSD pencereleri görüntüleyin."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Відображення спеціальних вікон OSD у стилі macOS у нижній центральній частині екрана під час регулювання гучності, яскравості або підсвічування клавіатури."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "调节音量、亮度或键盘背光时在屏幕底部居中显示自定义 macOS 风格的 OSD 窗口。"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แสดงหน้าต่าง OSD สไตล์ macOS ที่กำหนดเองที่กลางด้านล่างของหน้าจอเมื่อปรับระดับเสียง ความสว่าง หรือไฟแป้นพิมพ์"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toon aangepaste OSD-vensters in macOS-stijl midden onderaan het scherm wanneer je het volume, de helderheid of de toetsenbordverlichting aanpast."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "調節音量、亮度或鍵盤背光時在螢幕底部居中顯示自訂 macOS 風格的 OSD 視窗。"
+          }
+        }
+      }
+    },
+    "downloads" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Downloads"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "загрузки",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下载"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ดาวน์โหลด"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "downloads"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下載"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "descargas"
+          }
+        }
+      }
+    },
+    "Drag the previews to adjust vertical placement. Positive values lift the panel; negative values lower it. Changes apply instantly while the widgets are visible." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اسحب المعاينات لضبط الموضع الرأسي. القيم الموجبة ترفع اللوحة؛ القيم السالبة تخفضها. يتم تطبيق التغييرات على الفور أثناء ظهور الأدوات."
+          }
+        },
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перацягніце папярэднія прагляды, каб адрэгуляваць вертыкальнае размяшчэнне. Пазітыўныя значэнні падымаюць панэль, адмоўныя — апускаюць. Змены прымяняюцца імгненна, пакуль віджэты бачныя."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přetažením náhledů upravte vertikální umístění. Kladné hodnoty panel zvednou, záporné hodnoty jej sníží. Změny se projeví okamžitě, pokud jsou widgety viditelné."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ziehen Sie die Vorschauen, um die vertikale Platzierung anzupassen. Positive Werte heben das Panel an; negative Werte senken es. Änderungen werden sofort angewendet, solange die Widgets sichtbar sind."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Drag the previews to adjust vertical placement. Positive values lift the panel; negative values lower it. Changes apply instantly while the widgets are visible."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arrastre las vistas previas para ajustar la ubicación vertical. Los valores positivos elevan el panel; los valores negativos lo bajan. Los cambios se aplican al instante mientras los widgets están visibles."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Faites glisser les aperçus pour ajuster le placement vertical. Les valeurs positives soulèvent le panneau ; les valeurs négatives l'abaissent. Les modifications s'appliquent instantanément tant que les widgets sont visibles."
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ऊर्ध्वाधर स्थिति समायोजित करने के लिए पूर्वावलोकन को खींचें। सकारात्मक मान पैनल को ऊपर उठाते हैं; नकारात्मक मान इसे नीचे लाते हैं। विजेट्स दिखाई देने के दौरान परिवर्तन तुरंत लागू होते हैं।"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Húzza az előnézeteket a függőleges elhelyezés beállításához. A pozitív értékek felemelik a panelt, a negatív értékek lejjebb tolják. A változások azonnal érvénybe lépnek, amíg a widgetek láthatók."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перетащите превью для настройки вертикального положения. Положительные значения поднимают панель, отрицательные — опускают. Изменения применяются мгновенно."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "செங்குத்து நிலைப்படுத்துதலைச் சரிசெய்ய முன்னோட்டங்களை இழுக்கவும். நேர்மறை மதிப்புகள் பேனலை உயர்த்தும்; எதிர்மறை மதிப்புகள் அதைக் கீழே இறக்கும். விட்ஜெட்டுகள் தெரியும் போது மாற்றங்கள் உடனடியாகப் பொருந்தும்."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dikey yerleşimi ayarlamak için önizlemeleri sürükleyin. Pozitif değerler paneli kaldırır; negatif değerler onu düşürür. Değişiklikler, widget'lar görünürken anında uygulanır."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перетягніть попередній перегляд, щоб відрегулювати вертикальне розміщення. Позитивні значення піднімають панель, а негативні — опускають її. Зміни застосовуються миттєво, поки віджети видимі."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "拖动预览以调整垂直位置。正值上移面板，负值下移。更改在小组件可见时立即生效。"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ลากตัวอย่างเพื่อปรับตำแหน่งแนวตั้ง ค่าบวกยกแผงขึ้น ค่าลบลดแผงลง การเปลี่ยนแปลงมีผลทันทีขณะวิดเจ็ตมองเห็นได้"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versleep de voorbeelden om de verticale plaatsing aan te passen. Positieve waarden tillen het paneel omhoog; negatieve waarden verlagen deze. Wijzigingen zijn onmiddellijk van toepassing zolang de widgets zichtbaar zijn."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "拖移預覽以調整垂直位置。正值上移面板，負值下移。更改在小工具可見時立即生效。"
+          }
+        }
+      }
+    },
+    "Enable Anyway" : {
+      "comment" : "A button that enables the Custom OSD feature despite the warning.",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trotzdem aktivieren"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Enable Anyway"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activar de todos modos"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activer quand même"
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Всё равно включить"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仍然启用"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปิดใช้ต่อไป"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoe dan ook inschakelen"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仍然啟用"
+          }
+        }
+      }
+    },
+    "Enable Custom OSD" : {
+      "comment" : "A toggle that enables or disables the custom OSD feature.",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Benutzerdefiniertes OSD aktivieren"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Enable Custom OSD"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activar OSD personalizado"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activer l'OSD personnalisé"
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Включить Собственный OSD"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "启用自定义 OSD"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปิดใช้ OSD กำหนดเอง"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aangepaste OSD inschakelen"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "啟用自訂 OSD"
+          }
+        }
+      }
+    },
+    "Enable dynamic mirror" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dynamische Spiegelung aktivieren"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "Динамическое зеркало",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "启用动态镜像"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปิดใช้กระจกเงาแบบไดนามิก"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schakel dynamische spiegel in"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "啟用動態鏡像"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activar espejo dinámico"
+          }
+        }
+      }
+    },
+    "Enable HUDs" : {
+      "comment" : "A toggle that enables or disables the use of HUDs.",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HUDs aktivieren"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Enable HUDs"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activar HUDs"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activer les HUD"
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Включить системные HUD"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "启用 HUD"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปิดใช้ HUD"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schakel HUD's in"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "啟用 HUD"
+          }
+        }
+      }
+    },
+    "Enable media " : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Medien aktivieren"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "Включить медиа ",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "启用媒体 "
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปิดใช้สื่อ"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Media inschakelen"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "啟用媒體 "
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activar reproductor multimedia"
+          }
+        }
+      }
+    },
+    "Enable timer blur" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timer-Unschärfe aktivieren"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "Включить размытие таймера",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "启用计时器模糊"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปิดใช้เบลอตัวจับเวลา"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schakel timervervaging in"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "啟用計時器模糊"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activar desenfoque del temporizador"
+          }
+        }
+      }
+    },
+    "Enable timer feature in Settings to use this tab" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktivieren Sie die Timer-Funktion in den Einstellungen, um diese Registerkarte zu verwenden"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Enable timer feature in Settings to use this tab"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activa la función de temporizador en Ajustes para usar esta pestaña"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activer la fonction de minuterie dans les paramètres pour utiliser cet onglet"
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Включите функцию таймера в настройках"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu sekmeyi kullanmak için Ayarlar'da zamanlayıcı özelliğini etkinleştirin"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在设置中启用计时器功能以使用此标签页"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปิดใช้ฟีเจอร์ตัวจับเวลาในการตั้งค่าเพื่อใช้แท็บนี้"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schakel de timerfunctie in Instellingen in om dit tabblad te gebruiken"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在設定中啟用計時器功能以使用此分頁"
+          }
+        }
+      }
+    },
+    "Expand Notch with Animation" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erweitern Sie die Notch mit Animation"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Expand Notch with Animation"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Expandir el notch con animación"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Développer l'encoche avec l'animation"
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Расширять вырез с анимацией"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Animasyonla Çentiği Genişlet"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "展开刘海时带动画"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ขยายรอยบากด้วยแอนิเมชัน"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Breid inkeping uit met animatie"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "展開瀏海時帶動畫"
+          }
+        }
+      }
+    },
+    "Extend the notch span so the clipboard, colour picker, and other trailing icons remain visible on scaled displays (e.g. More Space)." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vergrößern Sie den Abstand zwischen den Symbolen, damit die Zwischenablage, die Farbauswahl und andere nachfolgende Symbole auf skalierten Anzeigen (z. B. „Mehr Platz“) sichtbar bleiben."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "Расширьте вырез, чтобы буфер обмена, пипетка и другие иконки оставались видимыми на масштабированных дисплеях.",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "扩展刘海范围，使剪贴板、取色器和其他尾部图标在缩放显示（如更多空间）上保持可见。"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ขยายรอยบากเพื่อให้คลิปบอร์ด ตัวเลือกสี และไอคอนท้ายอื่นๆ ยังมองเห็นได้บนจอที่ปรับสเกล (เช่น More Space)"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verleng de inkeping zodat het klembord, de kleurkiezer en andere vervolgpictogrammen zichtbaar blijven op geschaalde schermen (bijvoorbeeld Meer ruimte)."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "延伸功能瀏海範圍，使剪貼簿、取色器和其他尾部圖示在縮放顯示（如更多空間）上保持可見。"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extiende el ancho del notch para que el portapapeles, el selector de color y otros íconos finales sigan visibles en pantallas con escalado (p. ej. Más espacio)."
+          }
+        }
+      }
+    },
+    "Failed to read crash reports:" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fehler beim Lesen der Absturzberichte:"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "Не удалось прочитать отчеты о сбоях:",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "读取崩溃报告失败："
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "อ่านรายงานข้อขัดข้องล้มเหลว:"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kan crashrapporten niet lezen:"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "讀取崩潰報告失敗："
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudieron leer los informes de fallos:"
+          }
+        }
+      }
+    },
+    "Grant Accessibility permission in System Settings to control macOS HUD replacements from here." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "منح إذن إمكانية الوصول في إعدادات النظام للتحكم في استبدال macOS HUD من هنا."
+          }
+        },
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дазвольце доступ у наладах сістэмы, каб адсюль кіраваць заменамі HUD у macOS."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gewähren Sie die Berechtigung zur Bedienungshilfen in den Systemeinstellungen, um den macOS HUD-Austausch von hier aus zu steuern."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Grant Accessibility permission in System Settings to control macOS HUD replacements from here."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Concede permiso de accesibilidad en Ajustes del sistema para controlar los reemplazos de macOS HUD desde aquí."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accorder l'autorisation d'accessibilité dans les paramètres système pour contrôler les remplacements de macOS HUD à partir d'ici."
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सिस्टम सेटिंग्स में एक्सेसिबिलिटी की अनुमति दें ताकि यहां से macOS HUD प्रतिस्थापनों को नियंत्रित किया जा सके।"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Concedi l'autorizzazione all'accessibilità in Impostazioni di sistema per controllare le sostituzioni di macOS HUD da qui."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gi tilgangstillatelse i systeminnstillingene for å kontrollere macOS HUD-erstatninger herfra."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дайте разрешение на Универсальный доступ для управления заменой macOS HUD."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ge åtkomstbehörighet i systeminställningarna för att styra macOS HUD-ersättningar härifrån."
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS HUD değişimlerini buradan kontrol etmek için Sistem Ayarları'nda Erişilebilirlik izni verin."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在系统设置中授予辅助功能权限以从此处控制 macOS HUD 替代。"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ให้สิทธิ์ Accessibility ในการตั้งค่าระบบเพื่อควบคุมการแทนที่ HUD macOS จากที่นี่"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verleen Toegankelijkheidstoestemming in Systeeminstellingen om vanaf hier macOS HUD-vervangingen te beheren."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在系統設定中授予輔助使用權限以從此處控制 macOS HUD 替代。"
+          }
+        }
+      }
+    },
+    "Grant Accessibility permission in System Settings to customize the on-screen display replacements here." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дазвольце доступ у наладах сістэмы, каб тут наладзіць замены на экране."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "V nastavení systému udělejte oprávnění pro přístupnost, abyste mohli přizpůsobit náhrady zobrazení na obrazovce."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gewähren Sie hier die Berechtigung zur Bedienungshilfen in den Systemeinstellungen, um die Display-Ersetzungen auf dem Bildschirm anzupassen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Grant Accessibility permission in System Settings to customize the on-screen display replacements here."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Concede permiso de accesibilidad en Configuración del sistema para personalizar los reemplazos de la pantalla aquí."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accorder l'autorisation d'accessibilité dans les paramètres système pour personnaliser les remplacements d'affichage à l'écran ici."
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "यहाँ ऑन-स्क्रीन डिस्प्ले प्रतिस्थापनों को अनुकूलित करने के लिए सिस्टम सेटिंग्स में पहुँच क्षमता अनुमति दें।"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Concedi l'autorizzazione di accessibilità in Impostazioni di sistema per personalizzare le sostituzioni dello schermo qui."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gi tilgangstillatelse i systeminnstillingene for å tilpasse erstatningene for skjermvisningen her."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дайте разрешение на Универсальный доступ для настройки экранных уведомлений (OSD)."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ekrandaki ekran değiştirmelerini burada özelleştirmek için Sistem Ayarları'nda Erişilebilirlik izni verin."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在系统设置中授予辅助功能权限以自定义屏幕显示替代。"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ให้สิทธิ์ Accessibility ในการตั้งค่าระบบเพื่อปรับแต่งการแทนที่การแสดงผลบนหน้าจอที่นี่"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verleen Toegankelijkheidstoestemming in Systeeminstellingen om de schermvervangingen hier aan te passen."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在系統設定中授予輔助使用權限以自訂螢幕顯示替代。"
+          }
+        }
+      }
+    },
+    "Hide from Notch" : {
+      "comment" : "A button label that hides the Clock timer from the Notch app.",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vor Notch verstecken"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Hide from Notch"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ocultar del notch"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se cacher de Notch"
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скрыть из выреза"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "从刘海中隐藏"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ซ่อนจากรอยบาก"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verbergen voor inkeping"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "從瀏海中隱藏"
+          }
+        }
+      }
+    },
+    "HUDs are disabled because Custom OSD is enabled. Disable Custom OSD in the Custom OSD tab to use HUDs." : {
+      "comment" : "A message displayed below the toggle to disable HUDs, explaining that it's disabled because Custom OSD is enabled.",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HUD-ы адключаны, таму што ўключаны карыстальніцкі OSD. Адключыце карыстальніцкі OSD на ўкладцы «Карыстальніцкі OSD», каб выкарыстоўваць HUD-ы."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HUD jsou deaktivovány, protože je aktivováno vlastní OSD. Chcete-li používat HUD, deaktivujte vlastní OSD na kartě Vlastní OSD."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HUDs sind deaktiviert, da benutzerdefiniertes OSD aktiviert ist. Deaktivieren Sie Benutzerdefiniertes OSD auf der Registerkarte Benutzerdefiniertes OSD, um HUDs zu verwenden."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "HUDs are disabled because Custom OSD is enabled. Disable Custom OSD in the Custom OSD tab to use HUDs."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Los HUD están deshabilitados porque Custom OSD está habilitado. Deshable Custom OSD en la pestaña Custom OSD para usar HUDs."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les HUD sont désactivés car l'OSD personnalisé est activé. Désactiver l'OSD personnalisé dans l'onglet OSD personnalisé pour utiliser les HUD."
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "कस्टम OSD सक्षम होने के कारण HUD अक्षम हैं। HUD का उपयोग करने के लिए कस्टम OSD टैब में कस्टम OSD को अक्षम करें।"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gli HUD sono disabilitati perché l'OSD personalizzato è abilitato. Disabilita OSD personalizzato nella scheda OSD personalizzato per utilizzare gli HUD."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HUD-er er deaktivert fordi tilpasset OSD er aktivert. Deaktiver tilpasset OSD i fanen Tilpasset OSD for å bruke HUD-er."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HUD отключены, так как включен Пользовательский OSD. Отключите его для использования HUD."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HUD:er är inaktiverade eftersom anpassad OSD är aktiverad. Inaktivera anpassad OSD på fliken Anpassad OSD för att använda HUD:er."
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "தனிப்பயன் OSD இயக்கப்பட்டிருப்பதால் HUD-கள் முடக்கப்பட்டுள்ளன. HUD-களைப் பயன்படுத்த, தனிப்பயன் OSD தாவலில் தனிப்பயன் OSD-ஐ முடக்கவும்."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Özel OSD etkinleştirildiği için HUD'ler devre dışı bırakılmıştır. HUD'leri kullanmak için Özel OSD sekmesinde Özel OSD'yi devre dışı bırakın."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "由于已启用自定义 OSD，HUD 已禁用。请在自定义 OSD 标签页中禁用以使用 HUD。"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HUD ถูกปิดเนื่องจาก Custom OSD เปิดอยู่ ปิด Custom OSD ในแท็บ Custom OSD เพื่อใช้ HUD"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HUD's zijn uitgeschakeld omdat Aangepaste OSD is ingeschakeld. Schakel Aangepaste OSD uit op het tabblad Aangepaste OSD om HUD's te gebruiken."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "由於已啟用自訂 OSD，HUD 已停用。請在自訂 OSD 分頁中停用以使用 HUD。"
+          }
+        }
+      }
+    },
+    "Key" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schlüssel"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "Ключ",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "密钥"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่ม"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sleutel"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "金鑰"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tecla"
+          }
+        }
+      }
+    },
+    "Key 1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "value" : "Клавиша 1",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "密钥 1"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปุ่ม 1"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sleutel 1"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "金鑰 1"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tecla 1"
+          }
+        }
+      }
+    },
+    "lockScreen" : {
+      "extractionState" : "manual",
+      "shouldTranslate" : false,
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "value" : "экран блокировки",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "锁屏"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หน้าจอล็อก"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "鎖定畫面"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "pantallaDeBloqueo"
+          }
+        }
+      }
+    },
+    "Loop Mode:" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schleifenmodus:"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Loop Mode:"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modo de repetición:"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mode marche :"
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Режим зацикливания:"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "循环模式："
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "โหมดวนซ้ำ:"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lusmodus:"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "迴圈模式："
+          }
+        }
+      }
+    },
+    "Manage the Clock timer from the Clock app." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spravujte časovač hodin z aplikace Hodiny."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verwalten Sie den Clock-Timer in der Clock-App."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Manage the Clock timer from the Clock app."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Administra el temporizador desde la app Reloj."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gérez le minuteur de l'horloge à partir de l'application Horloge."
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gestisci il timer dell'orologio dall'app dell'orologio."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시계 앱에서 시계 타이머를 관리하세요."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Управляйте таймером из приложения Часы."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "从时钟应用管理时钟计时器。"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "จัดการตัวจับเวลา Clock จากแอป Clock"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beheer de Kloktimer vanuit de Klok-app."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "從時鐘 App 管理時鐘計時器。"
+          }
+        }
+      }
+    },
+    "Mirror System Timer" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "value" : "Повторять системный таймер",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "同步系统计时器"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตัวจับเวลาระบบกระจกเงา"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spiegelsysteemtimer"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "同步系統計時器"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reflejar el temporizador del sistema"
+          }
+        }
+      }
+    },
+    "No excluded apps" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine ausgeschlossenen Apps"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "No excluded apps"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No hay aplicaciones excluidas"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucune application exclue"
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нет исключенных приложений"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无排除的应用"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไม่มีแอปที่ยกเว้น"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geen uitgesloten apps"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無排除的 App"
+          }
+        }
+      }
+    },
+    "Opacity:" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deckkraft:"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Opacity:"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opacidad:"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opacité :"
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Непрозрачность:"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "透明度："
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ความทึบ:"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dekking:"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "透明度："
+          }
+        }
+      }
+    },
+    "Open noch on hover" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beim Darüberfahren mit der Maus öffnen"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "Открывать вырез при наведении",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "悬停时打开刘海"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปิดรอยบากเมื่อชี้"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open noch bij hover"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "懸停時開啟瀏海"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir el notch al pasar el cursor"
+          }
+        }
+      }
+    },
+    "Panel mode shows clipboard in a floating window near the notch. Popover mode shows clipboard as a dropdown attached to the clipboard button." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يظهر وضع اللوحة الحافظة في نافذة عائمة بالقرب من الشق. يظهر الوضع المنبثق الحافظة كقامة منسدلة متصلة بزر الحافظة."
+          }
+        },
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Панэльны рэжым паказвае буфер абмену ў плаваючым акне каля выемкі. Выскочны рэжым паказвае буфер абмену ў выглядзе выпадальнага спіса, прывязанага да кнопкі буфера абмену."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Režim panelu zobrazuje schránku v plovoucím okně poblíž zářezu. Režim vyskakovacího okna zobrazuje schránku jako rozevírací nabídku připojenou k tlačítku schránky."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der Bedienfeldmodus zeigt die Zwischenablage in einem schwebenden Fenster in der Nähe der Kerbe an. Der Popover-Modus zeigt die Zwischenablage als Dropdown-Liste an, die an der Zwischenablage-Schaltfläche angehängt ist."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Panel mode shows clipboard in a floating window near the notch. Popover mode shows clipboard as a dropdown attached to the clipboard button."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El modo panel muestra el portapapeles en una ventana flotante cerca del notch. El modo menú emergente lo muestra como un desplegable adjunto al botón del portapapeles."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le mode panneau affiche le presse-papiers dans une fenêtre flottante près de l'encoche. Le mode popover affiche le presse-papiers comme une liste déroulante attachée au bouton du presse-papiers."
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "पैनल मोड क्लिपबोर्ड को नॉच के पास एक फ्लोटिंग विंडो में दिखाता है। पॉपओवर मोड क्लिपबोर्ड को क्लिपबोर्ड बटन से जुड़े एक ड्रॉपडाउन के रूप में दिखाता है।"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La modalità pannello mostra gli appunti in una finestra mobile vicino alla tacca. La modalità popover mostra gli appunti come un menu a discesa collegato al pulsante degli appunti."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Panellmodus viser utklippstavlen i et flytende vindu nær hakket. Popover-modus viser utklippstavlen som en rullegardinmeny knyttet til utklippstavleknappen."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Режим \"Панель\" показывает окно рядом с вырезом. Режим \"Всплывающее окно\" показывает выпадающее меню возле кнопки."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Panel modu, çentiğin yanındaki yüzen bir pencerede panoyu gösterir. Açılır pencere modu, pano düğmesine bağlı bir açılır menü olarak panoyu gösterir."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "У режимі панелі буфер обміну відображається у спливаючому вікні біля вирізу. У режимі спливаючого вікна буфер обміну відображається у вигляді випадаючого меню, прикріпленого до кнопки буфера обміну."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "面板模式会在刘海附近的浮动窗口中显示剪贴板。弹出模式会将剪贴板显示为附加在剪贴板按钮上的下拉菜单。"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "โหมดแผงแสดงคลิปบอร์ดในหน้าต่างลอยใกล้รอยบาก โหมดป๊อปโอเวอร์แสดงคลิปบอร์ดเป็นดรอปดาวน์ติดกับปุ่มคลิปบอร์ด"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De paneelmodus toont het klembord in een zwevend venster nabij de inkeping. De popover-modus toont het klembord als een vervolgkeuzelijst die aan de klembordknop is gekoppeld."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "面板模式會在瀏海附近的浮動視窗中顯示剪貼簿。彈出模式會將剪貼簿顯示為附加在剪貼簿按鈕上的下拉選單。"
+          }
+        }
+      }
+    },
+    "plus" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plus"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "плюс",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บวก"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "plus"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "más"
+          }
+        }
+      }
+    },
+    "Popover mode shows clipboard as a dropdown attached to the clipboard button. Panel mode shows clipboard in a floating window near the notch." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يظهر الوضع المنبثق الحافظة كقامة منسدلة متصلة بزر الحافظة. يظهر وضع اللوحة الحافظة في نافذة عائمة بالقرب من الشق."
+          }
+        },
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Popover mode shows clipboard as a dropdown attached to the clipboard button. Panel mode shows clipboard in a floating window near the notch."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Režim vyskakovacího okna zobrazuje schránku jako rozevírací nabídku připojenou k tlačítku schránky. Režim panelu zobrazuje schránku v plovoucím okně poblíž zářezu."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der Popover-Modus zeigt die Zwischenablage als Dropdown-Liste an, die an der Zwischenablage-Schaltfläche angehängt ist. Der Bedienfeldmodus zeigt die Zwischenablage in einem schwebenden Fenster in der Nähe der Kerbe an."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Popover mode shows clipboard as a dropdown attached to the clipboard button. Panel mode shows clipboard in a floating window near the notch."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Popover mode shows clipboard as a dropdown attached to the clipboard button. Panel mode shows clipboard in a floating window near the notch."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le mode popover affiche le presse-papiers comme une liste déroulante attachée au bouton du presse-papiers. Le mode panneau affiche le presse-papiers dans une fenêtre flottante près de l'encoche."
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "पॉपओवर मोड क्लिपबोर्ड को क्लिपबोर्ड बटन से जुड़े ड्रॉपडाउन के रूप में दिखाता है। पैनल मोड क्लिपबोर्ड को नॉच के पास एक फ्लोटिंग विंडो में दिखाता है।"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Popover-modus viser utklippstavlen som en rullegardinmeny knyttet til utklippstavleknappen. Panelmodus viser utklippstavlen i et flytende vindu nær hakket."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поведение отображения буфера обмена."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "பாப்ஓவர் பயன்முறை, கிளிப் போர்டை கிளிப் போர்டு பொத்தானுடன் இணைக்கப்பட்ட ஒரு கீழ்விரிவாகக் காட்டுகிறது. பேனல் பயன்முறை, கிளிப் போர்டை நாட்சுக்கு அருகிலுள்ள ஒரு மிதக்கும் சாளரத்தில் காட்டுகிறது."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Açılır pencere modu, pano düğmesine bağlı bir açılır menü olarak panoyu gösterir. Panel modu, çentiğin yanındaki yüzen bir pencerede panoyu gösterir."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "У режимі спливаючого вікна буфер обміну відображається у вигляді випадаючого меню, прикріпленого до кнопки буфера обміну. У режимі панелі буфер обміну відображається у спливаючому вікні біля виїмки."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "弹出模式会将剪贴板显示为附加在剪贴板按钮上的下拉菜单。面板模式会在刘海附近的浮动窗口中显示剪贴板。"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "โหมดป๊อปโอเวอร์แสดงคลิปบอร์ดเป็นดรอปดาวน์ติดกับปุ่มคลิปบอร์ด โหมดแผงแสดงคลิปบอร์ดในหน้าต่างลอยใกล้รอยบาก"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De popover-modus toont het klembord als een vervolgkeuzelijst die aan de klembordknop is gekoppeld. De paneelmodus toont het klembord in een zwevend venster nabij de inkeping."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "彈出模式會將剪貼簿顯示為附加在剪貼簿按鈕上的下拉選單。面板模式會在瀏海附近的浮動視窗中顯示剪貼簿。"
+          }
+        }
+      }
+    },
+    "Preview Zoom:" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vorschau-Zoom:"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Preview Zoom:"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zoom de la vista previa:"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aperçu Zoom :"
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Масштаб предпросмотра:"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "预览缩放："
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ซูมตัวอย่าง:"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voorbeeldzoom:"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "預覽縮放："
+          }
+        }
+      }
+    },
+    "Quick Presets" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schnelle Voreinstellungen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Quick Presets"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preajustes rápidos"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Préréglages rapides"
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Быстрые пресеты"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "快捷预设"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "พรีเซ็ตด่วน"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Snelle voorinstellingen"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "快捷預設組合"
+          }
+        }
+      }
+    },
+    "Quick Start" : {
+      "comment" : "A label displayed above the quick start options in the timer tab.",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schnellstart"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Quick Start"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inicio rápido"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Démarrage rapide"
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Быстрый старт"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "快速开始"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เริ่มด่วน"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Snel beginnen"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "快速開始"
+          }
+        }
+      }
+    },
+    "Replaces macOS system HUD with Dynamic Island displays for volume, brightness, and keyboard backlight." : {
+      "comment" : "A footer description of the HUDs feature.",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يستبدل نظام macOS HUD بشاشات Dynamic Island لمستوى الصوت والسطوع والإضاءة الخلفية للوحة المفاتيح."
+          }
+        },
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Замяняе сістэмны HUD macOS на дынамічныя востравы для рэгулявання гучнасці, яркасці і падсветкі клавіятуры."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nahrazuje systémové HUD macOS displeji Dynamic Island pro ovládání hlasitosti, jasu a podsvícení klávesnice."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ersetzt das macOS-System-HUD durch Dynamic Island-Displays für Lautstärke, Helligkeit und Tastatur-Hintergrundbeleuchtung."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Replaces macOS system HUD with Dynamic Island displays for volume, brightness, and keyboard backlight."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reemplaza el HUD del sistema macOS con pantallas Dynamic Island para el volumen, el brillo y la retroiluminación del teclado."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remplace le HUD du système macOS par des écrans Dynamic Island pour le volume, la luminosité et le rétroéclairage du clavier."
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sostituisce l'HUD del sistema macOS con i display Dynamic Island per volume, luminosità e retroilluminazione della tastiera."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erstatt macOS-systemets HUD med Dynamic Island-skjermer for volum, lysstyrke og tastaturbelysning."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zastępuje system HUD macOS wyświetlaczami Dynamic Island służącymi do regulacji głośności, jasności i podświetlenia klawiatury."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Заменяет системный HUD macOS на элементы Dynamic Island."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ஒலி அளவு, பிரகாசம் மற்றும் விசைப்பலகை பின்னொளி ஆகியவற்றிற்கான macOS சிஸ்டம் HUD-ஐ டைனமிக் ஐலேண்ட் காட்சிகளுடன் மாற்றுகிறது."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ses seviyesi, parlaklık ve klavye arka aydınlatması için macOS sistem HUD'sini Dynamic Island ekranlarıyla değiştirir."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Замінює системний HUD macOS на дисплеї Dynamic Island для регулювання гучності, яскравості та підсвічування клавіатури."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用灵动岛显示替换 macOS 系统 HUD 的音量、亮度和键盘背光。"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แทนที่ HUD ระบบ macOS ด้วยการแสดงผลไดนามิกไอแลนด์สำหรับระดับเสียง ความสว่าง และไฟแป้นพิมพ์"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vervangt de HUD van het macOS-systeem door Dynamic Island-schermen voor volume, helderheid en toetsenbordverlichting."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用動態島顯示替換 macOS 系統 HUD 的音量、亮度和鍵盤背光。"
+          }
+        }
+      }
+    },
+    "Screen Padding: %@px" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "value" : "Отступы экрана: %@ px",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "屏幕边距：%@像素"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Screen Padding: %@px"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schermopvulling: %@px"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "螢幕邊距：%@畫素"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Relleno de pantalla: %@px"
+          }
+        }
+      }
+    },
+    "show Bluetooth device connections" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bluetooth-Geräteverbindungen anzeigen"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "показывать подключения Bluetooth",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示蓝牙设备连接"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แสดงการเชื่อมต่ออุปกรณ์บลูทูธ"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bluetooth-apparaatverbindingen weergeven"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示藍牙裝置連線"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "mostrar conexiones de dispositivos Bluetooth"
+          }
+        }
+      }
+    },
+    "Show calender" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalender anzeigen"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "Показывать календарь",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示日历"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แสดงปฏิทิน"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agenda weergeven"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示行事曆"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrar calendario"
+          }
+        }
+      }
+    },
+    "Show calender events inside the notch" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalenderereignisse in der Aussparung anzeigen"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "Показывать события внутри выреза",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在刘海中显示日历事件"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แสดงเหตุการณ์ปฏิทินในรอยบาก"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toon agenda-activiteiten binnen de inkeping"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在瀏海中顯示行事曆事件"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrar eventos del calendario dentro del notch"
+          }
+        }
+      }
+    },
+    "Show media output control in other layouts" : {
+      "comment" : "A toggle that lets the user enable or disable the media output control in layouts other than the home screen.",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إظهار التحكم في إخراج الوسائط في تخطيطات أخرى"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Medienausgabesteuerung in anderen Layouts anzeigen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Show media output control in other layouts"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrar el control de salida multimedia en otros diseños"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afficher le contrôle de sortie multimédia dans d'autres mises en page"
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показывать переключатель вывода аудио в других макетах"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在其他布局中显示媒体输出控制"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แสดงปุ่มควบคุมเอาต์พุตสื่อในเลย์เอาต์อื่น"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toon media-uitvoercontrole in andere lay-outs"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在其他版面配置中顯示媒體輸出控制"
+          }
+        }
+      }
+    },
+    "Single Indicators" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einzelindikatoren"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "Одиночные индикаторы",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "单个指示器"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตัวบ่งชี้เดี่ยว"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enkele indicatoren"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "單個指示器"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indicadores individuales"
+          }
+        }
+      }
+    },
+    "Skip behaviour" : {
+      "comment" : "A section header that describes the skip behaviour settings.",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verhalten überspringen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Skip behaviour"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comportamiento de salto"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sauter le comportement"
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поведение пропуска"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "跳过行为"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "พฤติกรรมการข้าม"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gedrag overslaan"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "跳過行為"
+          }
+        }
+      }
+    },
+    "The MacBook icon is available only in the circular layout." : {
+      "comment" : "A message displayed below a toggle that lets the user choose whether to show a MacBook icon in the battery gauge of the weather widget. The message explains that the MacBook icon is only available when the weather widget is in a",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تتوفر أيقونة MacBook فقط في التخطيط الدائري."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ikona MacBooku je k dispozici pouze v kruhovém rozložení."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das MacBook-Symbol ist nur im kreisförmigen Layout verfügbar."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "The MacBook icon is available only in the circular layout."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El icono del MacBook solo está disponible en el diseño circular."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L'icône MacBook n'est disponible que dans la disposition circulaire."
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L'icona del MacBook è disponibile solo nel layout circolare."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MacBook-ikonet er kun tilgjengelig i det sirkulære oppsettet."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ikona MacBooka jest dostępna tylko w układzie okrągłym."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Иконка MacBook доступна только в круглом макете."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Піктограма MacBook доступна тільки в круглому макеті."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MacBook 图标仅在圆形布局中可用。"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไอคอน MacBook ใช้ได้เฉพาะในเลย์เอาต์แบบวงกลม"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Het MacBook-pictogram is alleen beschikbaar in de ronde lay-out."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MacBook 圖示僅在圓形版面配置中可用。"
+          }
+        }
+      }
+    },
+    "This duration powers the \\\"Custom\\\" option inside the timer popover for quick access." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diese Dauer unterstützt die Option \\\"Benutzerdefiniert\\\" im Timer-Popover für den schnellen Zugriff."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "Используется для быстрого доступа к кнопке «Особый».",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此时长用于计时器弹出窗口中的「自定义」选项，方便快速访问。"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ระยะเวลานี้ใช้กับตัวเลือก \"กำหนดเอง\" ในป๊อปโอเวอร์ตัวจับเวลาเพื่อเข้าถึงด่วน"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deze duur activeert de optie \\\"Aangepast\\\" in de timer-popover voor snelle toegang."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此時長用於計時器彈出式視窗中的「自訂」選項，方便快速存取。"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esta duración alimenta la opción \"Personalizado\" dentro del menú del temporizador para un acceso rápido."
+          }
+        }
+      }
+    },
+    "Try pressing volume keys to test system HUD functionality" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drücken Sie die Lautstärketasten, um die System-HUD-Funktionalität zu testen."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "Нажмите клавиши громкости для проверки системного HUD",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尝试按音量键来测试系统 HUD 功能"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ลองกดปุ่มระดับเสียงเพื่อทดสอบการทำงานของ HUD ระบบ"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Probeer op de volumetoetsen te drukken om de HUD-functionaliteit van het systeem te testen"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "嘗試按音量鍵來測試系統 HUD 功能"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prueba presionar las teclas de volumen para comprobar el funcionamiento del HUD del sistema"
+          }
+        }
+      }
+    },
+    "use a circular battery indicator" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verwenden Sie eine kreisförmige Batterieanzeige"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "использовать круглый индикатор батареи",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用圆形电池指示器"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ใช้ตัวบ่งชี้แบตเตอรี่แบบวงกลม"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "gebruik een ronde batterij-indicator"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用圓形電池指示器"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "usar un indicador de batería circular"
+          }
+        }
+      }
+    },
+    "Use clored gauges" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verwenden Sie farbige Messgeräte"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "Использовать цветные шкалы",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用彩色仪表"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ใช้ตัววัดสี"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gebruik gesloten meters"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用彩色儀表"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usar medidores con color"
+          }
+        }
+      }
+    },
+    "We need your camera for Mirror mode" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wir benötigen Ihre Kamera für den Spiegelmodus."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tarvitsemme kamerasi peilikuva-tilaan"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "Нам нужна ваша камера для режима зеркала",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "镜像模式需要使用您的相机"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เราต้องการกล้องของคุณสำหรับโหมดกระจกเงา"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We hebben je camera nodig voor de spiegelmodus"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "鏡像模式需要使用你的相機"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Necesitamos tu cámara para el modo espejo"
+          }
+        }
+      }
+    },
+    "When disabled, all keyboard shortcuts will be inactive. You can still use the UI controls" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wenn diese Option deaktiviert ist, sind alle Tastaturkürzel inaktiv. Sie können weiterhin die UI-Steuerelemente verwenden."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kun tämä toiminto on pois käytöstä, kaikki pikanäppäimet ovat passiivisia. Voit kuitenkin edelleen käyttää käyttöliittymän ohjaimia."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "value" : "При отключении все сочетания клавиш будут неактивны.",
+            "state" : "translated"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "禁用后，所有键盘快捷键将不可用。您仍然可以使用界面控制"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เมื่อปิดใช้ ทางลัดแป้นพิมพ์ทั้งหมดจะไม่ทำงาน คุณยังสามารถใช้ปุ่มควบคุม UI"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indien uitgeschakeld, zijn alle sneltoetsen inactief. Je kunt de UI-bedieningselementen nog steeds gebruiken"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "停用後，所有鍵盤快速鍵將不可用。你仍然可以使用介面控制"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cuando está desactivado, todos los atajos de teclado quedan inactivos. Aun así puedes usar los controles de la interfaz"
+          }
+        }
+      }
+    },
+    "When enabled, the Atoll will expand horizontally to match the animation size" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عند التمكين، ستتوسع الجرة المرجانية أفقيا لتتناسب مع حجم الرسوم المتحركة"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pokud je tato funkce povolena, Atoll se rozbalí horizontálně tak, aby odpovídal velikosti animace."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wenn aktiviert, erweitert sich das Atoll horizontal, um der Animationsgröße zu entsprechen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "When enabled, the Atoll will expand horizontally to match the animation size"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cuando esté habilitado, el atolón se expandirá horizontalmente para que coincida con el tamaño de la animación"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lorsqu'il est activé, l'atoll se développe horizontalement pour correspondre à la taille de l'animation"
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सक्रिय होने पर, एटोल एनिमेशन के आकार से मेल खाने के लिए क्षैतिज रूप से फैल जाएगा।"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quando abilitato, l'atollo si espanderà orizzontalmente per corrispondere alla dimensione dell'animazione"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Når denne funksjonen er aktivert, vil Atoll utvides horisontalt for å tilpasse seg animasjonens størrelse."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Po włączeniu Atoll rozszerzy się poziomo, aby dopasować się do rozmiaru animacji."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "При включении Atoll будет расширяться по горизонтали в соответствии с размером анимации."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "இயக்கப்பட்டிருக்கும்போது, அட்டோல் அனிமேஷனின் அளவிற்குப் பொருந்தும்படி கிடைமட்டமாக விரிவடையும்."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Etkinleştirildiğinde, Atoll animasyon boyutuna uyacak şekilde yatay olarak genişleyecektir"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "启用后，Atoll 将水平扩展以匹配动画大小"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เมื่อเปิดใช้ Atoll จะขยายแนวนอนตามขนาดแอนิเมชัน"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Als deze optie is ingeschakeld, wordt het Atoll horizontaal uitgevouwen zodat het overeenkomt met de animatiegrootte"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "啟用後，Atoll 將水平延伸功能以匹配動畫大小"
+          }
+        }
+      }
+    },
+    "Reverse scroll gestures" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "反向滚动"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กลับทิศทางท่าทางเลื่อน"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Omgekeerde scrollbewegingen"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Инвертировать жесты прокрутки"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "反向滾動"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Invertir gestos de desplazamiento"
+          }
+        }
+      }
+    },
+    "Hide until hovered" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "悬停时显示"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ซ่อนจนกว่าจะชี้"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verbergen totdat er zweefde"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скрывать до наведения"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "懸停時顯示"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ocultar hasta pasar el cursor"
+          }
+        }
+      }
+    },
+    "Full Disk Access for global mode" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全局模式需要完全磁盘访问权限"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Full Disk Access สำหรับโหมดทั่วไป"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volledige schijftoegang voor de globale modus"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Полный доступ к диску для глобального режима"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全域模式需要完整磁碟取用權"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acceso completo al disco para el modo global"
+          }
+        }
+      }
+    },
+    "Without Full Disk Access, Shelf can only read files from Documents and Downloads. Grant Full Disk Access to make Shelf work globally." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果没有完全磁盘访问权限，暂存器只能读取文档和下载目录的文件。授予完全磁盘访问权限以使暂存器能在全局范围工作。"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หากไม่มี Full Disk Access Shelf อ่านไฟล์ได้เฉพาะจาก Documents และ Downloads ให้สิทธิ์ Full Disk Access เพื่อให้ Shelf ทำงานได้ทั่วไป"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zonder volledige schijftoegang kan de plank alleen bestanden uit documenten en downloads lezen. Verleen volledige schijftoegang om de plank overal te laten werken."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果沒有完整磁碟取用權，暫存器只能讀取文件和下載目錄的檔案。授予完整磁碟取用權以使暫存器能在全域範圍工作。"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sin acceso completo al disco, Shelf solo puede leer archivos de Documentos y Descargas. Concede acceso completo al disco para que Shelf funcione globalmente."
           }
         }
       }

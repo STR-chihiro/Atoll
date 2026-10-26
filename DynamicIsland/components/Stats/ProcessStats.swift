@@ -22,8 +22,8 @@ import SwiftUI
 
 // Process information structure
 struct ProcessStats: Identifiable, Hashable {
-    let id = UUID()
     let pid: Int32
+    var id: Int32 { pid }
     let name: String
     let cpuUsage: Double
     let memoryUsage: UInt64 // in bytes

@@ -25,7 +25,10 @@ enum StatsPopoverMetrics {
     static let ringDiameter: CGFloat = 168
     static let ringLineWidth: CGFloat = 6
     static let sectionSpacing: CGFloat = 16
-    static let contentPadding: CGFloat = 16
+    static let contentPadding: CGFloat = 20
+    /// Shared popover width. Kept on the scaffold so the card cannot lay out
+    /// wider than the window and get clipped on the leading edge.
+    static let popoverWidth: CGFloat = 420
     static let closeButtonSize: CGFloat = 32
     static let chartHeight: CGFloat = 72
     static let progressHeight: CGFloat = 3
@@ -110,48 +113,43 @@ struct StatsPopoverScaffold<Footer: View>: View {
     }
 
     var body: some View {
-        VStack(spacing: 0) {
+        VStack(alignment: .leading, spacing: StatsPopoverMetrics.sectionSpacing) {
             StatsPopoverHeader(title: title, subtitle: subtitle, accent: accent)
-                .padding(.leading, StatsPopoverMetrics.contentPadding)
-                .padding(.trailing, 8)
-                .padding(.top, 8)
-                .padding(.bottom, StatsPopoverMetrics.sectionSpacing)
 
-            ScrollView {
-                VStack(alignment: .leading, spacing: StatsPopoverMetrics.sectionSpacing) {
-                    StatsPopoverRing(
-                        fraction: ringFraction,
-                        value: ringValue,
-                        caption: ringCaption,
-                        accent: accent
-                    )
-                    .frame(maxWidth: .infinity)
+            StatsPopoverRing(
+                fraction: ringFraction,
+                value: ringValue,
+                caption: ringCaption,
+                accent: accent
+            )
+            .frame(maxWidth: .infinity)
 
-                    Text(heroLine)
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                        .multilineTextAlignment(.center)
-                        .frame(maxWidth: .infinity, alignment: .center)
+            Text(heroLine)
+                .font(.caption)
+                .foregroundStyle(.secondary)
+                .multilineTextAlignment(.center)
+                .frame(maxWidth: .infinity, alignment: .center)
 
-                    StatsPopoverPeakChart(
-                        values: history,
-                        sampleInterval: sampleInterval,
-                        accent: accent
-                    )
+            StatsPopoverPeakChart(
+                values: history,
+                sampleInterval: sampleInterval,
+                accent: accent
+            )
 
-                    if !detailRows.isEmpty {
-                        StatsPopoverDetailSection(rows: detailRows)
-                    }
-
-                    StatsPopoverProcessSection(processes: processes, accent: accent)
-                    StatsPopoverSummaryRow(items: summaryItems)
-                    footer
-                }
-                .padding(.horizontal, StatsPopoverMetrics.contentPadding)
-                .padding(.bottom, StatsPopoverMetrics.contentPadding)
+            if !detailRows.isEmpty {
+                StatsPopoverDetailSection(rows: detailRows)
             }
+
+            StatsPopoverProcessSection(processes: processes, accent: accent)
+            StatsPopoverSummaryRow(items: summaryItems)
+            footer
         }
-        .frame(maxWidth: .infinity, alignment: .top)
+        .padding(StatsPopoverMetrics.contentPadding)
+        .frame(width: StatsPopoverMetrics.popoverWidth, alignment: .topLeading)
+        .fixedSize(horizontal: true, vertical: true)
+        .transaction { transaction in
+            transaction.animation = nil
+        }
     }
 }
 
@@ -269,35 +267,42 @@ private struct StatsPopoverPeakChart: View {
     }
 
     private var chart: some View {
-        GeometryReader { geometry in
-            let width = geometry.size.width
-            let height = geometry.size.height
+        Canvas { context, size in
             let inset: CGFloat = 6
-            let plotWidth = max(width - inset * 2, 1)
+            let plotWidth = max(size.width - inset * 2, 1)
+            let height = size.height
             let count = values.count
             let scale = max(peakValue, 1)
             let peakX = xPosition(index: peakIndex, count: count, plotWidth: plotWidth, inset: inset)
-            let peakY = yPosition(value: values.indices.contains(peakIndex) ? values[peakIndex] : 0, height: height, scale: scale)
+            let peakY = yPosition(
+                value: values.indices.contains(peakIndex) ? values[peakIndex] : 0,
+                height: height,
+                scale: scale
+            )
 
-            ZStack {
-                linePath(width: plotWidth, height: height, inset: inset, scale: scale)
-                    .stroke(accent, style: StrokeStyle(lineWidth: 1.5, lineCap: .round, lineJoin: .round))
+            context.stroke(
+                linePath(width: plotWidth, height: height, inset: inset, scale: scale),
+                with: .color(accent),
+                style: StrokeStyle(lineWidth: 1.5, lineCap: .round, lineJoin: .round)
+            )
+            context.stroke(
+                samplePoints(width: plotWidth, height: height, inset: inset, scale: scale),
+                with: .color(accent),
+                lineWidth: 1
+            )
 
-                samplePoints(width: plotWidth, height: height, inset: inset, scale: scale)
-                    .stroke(accent, style: StrokeStyle(lineWidth: 1, lineCap: .round))
+            var peakLine = Path()
+            peakLine.move(to: CGPoint(x: peakX, y: 0))
+            peakLine.addLine(to: CGPoint(x: peakX, y: height))
+            context.stroke(
+                peakLine,
+                with: .color(accent.opacity(0.85)),
+                style: StrokeStyle(lineWidth: 1, dash: [3, 3])
+            )
 
-                Path { path in
-                    path.move(to: CGPoint(x: peakX, y: 0))
-                    path.addLine(to: CGPoint(x: peakX, y: height))
-                }
-                .stroke(accent.opacity(0.85), style: StrokeStyle(lineWidth: 1, dash: [3, 3]))
-
-                Circle()
-                    .stroke(accent, lineWidth: 1.5)
-                    .background(Circle().fill(Color(nsColor: .controlBackgroundColor)))
-                    .frame(width: 8, height: 8)
-                    .position(x: peakX, y: peakY)
-            }
+            let marker = CGRect(x: peakX - 4, y: peakY - 4, width: 8, height: 8)
+            context.fill(Path(ellipseIn: marker), with: .color(Color(nsColor: .controlBackgroundColor)))
+            context.stroke(Path(ellipseIn: marker), with: .color(accent), lineWidth: 1.5)
         }
     }
 
@@ -395,7 +400,7 @@ private struct StatsPopoverProcessSection: View {
             )
 
             if processes.isEmpty {
-                Text("No process data yet. Keep stats open for a moment.")
+                Text(String(localized: "No process data yet. Keep stats open for a moment."))
                     .font(.footnote)
                     .foregroundStyle(.secondary)
                     .frame(maxWidth: .infinity, alignment: .leading)
